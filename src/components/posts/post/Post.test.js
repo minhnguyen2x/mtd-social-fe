@@ -83,7 +83,7 @@ describe('Post', () => {
     expect(postImage).toBeInTheDocument();
     expect(postImage.childNodes.item(0)).toHaveAttribute(
       'src',
-      'https://res.cloudinary.com/dyamr9ym3/image/upload/v2/1'
+      'https://res.cloudinary.com/ds1aylnvs/image/upload/v2/1'
     );
   });
 
