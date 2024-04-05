@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    //path
+    "baseUrl": "./src",
+    "paths": {
+      "@features/*": ["./features/*"],
+      "@shared/*": ["./shared/*"],
+      "@components/*": ["./components/*"],
+      "@services/*": ["./services/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@pages/*": ["./pages/*"],
+      "@mocks/*": ["./mocks/*"],
+      "@assets/*": ["./assets/*"],
+      "@colors/*": ["./colors/*"],
+      "@redux/*": ["./redux-toolkit/*"],
+      "@root/*": ["./*"],
+      "@/*": ["./*"]
+    },
+
+    // unknown
+    "types": ["vite/client"],
+    "esModuleInterop": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
