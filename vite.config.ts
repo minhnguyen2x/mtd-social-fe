@@ -6,10 +6,8 @@ export default defineConfig({
   // depending on your application, base can also be "/"
   plugins: [react(), viteTsconfigPaths()],
   server: {
-    // this ensures that the browser opens upon server start
     open: true,
-    // this sets a default port to 3000
-    port: 3000,
+    port: 7777,
     fs: {
       cachedChecks: false
     }

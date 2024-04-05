@@ -6,7 +6,7 @@ export let BASE_ENDPOINT = '';
 export const APP_ENVIRONMENT = 'local';
 
 if (APP_ENVIRONMENT === 'local') {
-  BASE_ENDPOINT = 'http://localhost:9876';
+  BASE_ENDPOINT = 'http://127.0.0.1:9876';
 } else if (APP_ENVIRONMENT === 'development') {
   BASE_ENDPOINT = 'https://api.dev.<your-backend-domain>';
 } else if (APP_ENVIRONMENT === 'staging') {
