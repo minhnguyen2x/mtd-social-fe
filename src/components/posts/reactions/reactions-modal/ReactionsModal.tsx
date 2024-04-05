@@ -1,6 +1,6 @@
 import ReactionWrapper from '@components/posts/modal-wrappers/reaction-wrapper/ReactionWrapper';
 import ReactionList from '@components/posts/reactions/reactions-modal/reaction-list/ReactionList';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { closeModal } from '@redux/reducers/modal/modal.reducer';
 import { clearPost } from '@redux/reducers/post/post.reducer';
 import { postService } from '@services/api/post/post.service';

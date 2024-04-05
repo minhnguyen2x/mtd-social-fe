@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react';
 import { Utils } from '@services/utils/utils.service';
 import { authService } from '@services/api/auth/auth.service';
 import { useNavigate } from 'react-router-dom';
-import useLocalStorage from '@hooks/useLocalStorage';
-import useSessionStorage from '@hooks/useSessionStorage';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
+import useSessionStorage from '@shared/hooks/useSessionStorage';
 import { useDispatch } from 'react-redux';
 
 const Register = () => {

@@ -1,6 +1,6 @@
 import ChatList from '@components/chat/list/ChatList';
 import ChatWindow from '@components/chat/window/ChatWindow';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import '@pages/social/chat/Chat.scss';
 import { getConversationList } from '@redux/api/chat';
 import { useDispatch, useSelector } from 'react-redux';

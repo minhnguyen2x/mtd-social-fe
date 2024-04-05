@@ -1,7 +1,7 @@
 import Avatar from '@components/avatar/Avatar';
 import '@components/posts/comments/comments-modal/CommentsModal.scss';
 import ReactionWrapper from '@components/posts/modal-wrappers/reaction-wrapper/ReactionWrapper';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { closeModal } from '@redux/reducers/modal/modal.reducer';
 import { clearPost } from '@redux/reducers/post/post.reducer';
 import { postService } from '@services/api/post/post.service';

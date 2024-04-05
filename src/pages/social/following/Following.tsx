@@ -3,7 +3,7 @@ import '@pages/social/following/Following.scss';
 import Avatar from '@components/avatar/Avatar';
 import CardElementButtons from '@components/card-element/CardElementButtons';
 import CardElementStats from '@components/card-element/CardElementStats';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { followerService } from '@services/api/followers/follower.service';
 import { socketService } from '@services/socket/socket.service';
 import { FollowersUtils } from '@services/utils/followers-utils.service';

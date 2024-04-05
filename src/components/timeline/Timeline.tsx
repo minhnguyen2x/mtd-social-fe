@@ -3,7 +3,7 @@ import PostFormSkeleton from '@components/posts/post-form/PostFormSkeleton';
 import Post from '@components/posts/post/Post';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
 import CountContainer from '@components/timeline/CountContainer';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { followerService } from '@services/api/followers/follower.service';
 import { PostUtils } from '@services/utils/post-utils.service';
 import { Utils } from '@services/utils/utils.service';
@@ -14,7 +14,7 @@ import { useParams } from 'react-router-dom';
 import '@components/timeline/Timeline.scss';
 import BasicInfo from '@components/timeline/BasicInfo';
 import SocialLinks from '@components/timeline/SocialLinks';
-import useLocalStorage from '@hooks/useLocalStorage';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { postService } from '@services/api/post/post.service';
 import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
 

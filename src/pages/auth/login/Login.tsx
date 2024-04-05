@@ -6,9 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import '@pages/auth/login/Login.scss';
 import { authService } from '@services/api/auth/auth.service';
-import useLocalStorage from '@hooks/useLocalStorage';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { Utils } from '@services/utils/utils.service';
-import useSessionStorage from '@hooks/useSessionStorage';
+import useSessionStorage from '@shared/hooks/useSessionStorage';
 
 const Login = () => {
   const [username, setUsername] = useState('');

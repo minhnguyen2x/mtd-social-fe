@@ -1,5 +1,5 @@
 import '@pages/social/videos/Videos.scss';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { followerService } from '@services/api/followers/follower.service';
 import { postService } from '@services/api/post/post.service';
 import { PostUtils } from '@services/utils/post-utils.service';

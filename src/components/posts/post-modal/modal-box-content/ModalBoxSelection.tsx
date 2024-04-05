@@ -3,7 +3,7 @@ import gif from '@assets/images/gif.png';
 import feeling from '@assets/images/feeling.png';
 import video from '@assets/images/video.png';
 import Input from '@components/input/Input';
-import useDetectOutsideClick from '@hooks/useDetectOutsideClick';
+import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Feelings from '@components/feelings/Feelings';

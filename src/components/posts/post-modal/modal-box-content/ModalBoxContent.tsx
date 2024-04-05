@@ -1,6 +1,6 @@
 import Avatar from '@components/avatar/Avatar';
 import SelectDropdown from '@components/select-dropdown/SelectDropdown';
-import useDetectOutsideClick from '@hooks/useDetectOutsideClick';
+import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { privacyList } from '@services/utils/static.data';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';

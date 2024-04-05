@@ -1,8 +1,8 @@
 import Avatar from '@components/avatar/Avatar';
 import CardElementButtons from '@components/card-element/CardElementButtons';
 import CardElementStats from '@components/card-element/CardElementStats';
-import useEffectOnce from '@hooks/useEffectOnce';
-import useInfiniteScroll from '@hooks/useInfiniteScroll';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
+import useInfiniteScroll from '@shared/hooks/useInfiniteScroll';
 import '@pages/social/people/People.scss';
 import { followerService } from '@services/api/followers/follower.service';
 import { userService } from '@services/api/user/user.service';

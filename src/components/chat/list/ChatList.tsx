@@ -7,7 +7,7 @@ import '@components/chat/list/ChatList.scss';
 import SearchList from '@components/chat/list/search-list/SearchList';
 import { useCallback, useEffect, useState } from 'react';
 import { userService } from '@services/api/user/user.service';
-import useDebounce from '@hooks/useDebounce';
+import useDebounce from '@shared/hooks/useDebounce';
 import { ChatUtils } from '@services/utils/chat-utils.service';
 import { cloneDeep, find, findIndex } from 'lodash';
 import { createSearchParams, useLocation, useNavigate, useSearchParams } from 'react-router-dom';

@@ -11,7 +11,7 @@ import { Utils } from '@services/utils/utils.service';
 import { userService } from '@services/api/user/user.service';
 import { FollowersUtils } from '@services/utils/followers-utils.service';
 import { socketService } from '@services/socket/socket.service';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 
 const FollowerCard = ({ userData }) => {
   const { profile } = useSelector((state) => state.user);

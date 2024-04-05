@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postService } from '@services/api/post/post.service';
 import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
 import { socketService } from '@services/socket/socket.service';
-import useLocalStorage from '@hooks/useLocalStorage';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { clearPost, updatePostItem } from '@redux/reducers/post/post.reducer';
 
 const CommentArea = ({ post }) => {

@@ -9,7 +9,7 @@ import PostCommentSection from '@components/posts/post-comment-section/PostComme
 import { useDispatch, useSelector } from 'react-redux';
 import ReactionsModal from '@components/posts/reactions/reactions-modal/ReactionsModal';
 import { Utils } from '@services/utils/utils.service';
-import useLocalStorage from '@hooks/useLocalStorage';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
 import CommentInputBox from '@components/posts/comments/comment-input/CommentInputBox';
 import CommentsModal from '@components/posts/comments/comments-modal/CommentsModal';
 import { useState, useEffect } from 'react';

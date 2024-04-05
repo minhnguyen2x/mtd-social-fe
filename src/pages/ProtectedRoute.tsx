@@ -1,6 +1,6 @@
-import useEffectOnce from '@hooks/useEffectOnce';
-import useLocalStorage from '@hooks/useLocalStorage';
-import useSessionStorage from '@hooks/useSessionStorage';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
+import useLocalStorage from '@shared/hooks/useLocalStorage';
+import useSessionStorage from '@shared/hooks/useSessionStorage';
 import { addUser } from '@redux/reducers/user/user.reducer';
 import { userService } from '@services/api/user/user.service';
 import { Utils } from '@services/utils/utils.service';

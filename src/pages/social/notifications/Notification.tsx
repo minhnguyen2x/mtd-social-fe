@@ -5,7 +5,7 @@ import { FaCircle, FaRegCircle, FaRegTrashAlt } from 'react-icons/fa';
 import { Utils } from '@services/utils/utils.service';
 import { useDispatch, useSelector } from 'react-redux';
 import { notificationService } from '@services/api/notifications/notification.service';
-import useEffectOnce from '@hooks/useEffectOnce';
+import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { NotificationUtils } from '@services/utils/notification-utils.service';
 import NotificationPreview from '@components/dialog/NotificationPreview';
 import { timeAgo } from '@services/utils/timeago.utils';
