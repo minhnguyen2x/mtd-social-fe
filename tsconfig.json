@@ -28,7 +28,6 @@
 
       "@components/*": ["./components/*"],
       "@mocks/*": ["./mocks/*"],
-      "@colors/*": ["./colors/*"],
       "@redux/*": ["./redux-toolkit/*"],
       "@root/*": ["./*"],
       "@/*": ["./*"]

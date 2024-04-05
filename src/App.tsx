@@ -1,7 +1,7 @@
 import { AppRouter } from '@root/routes';
 import { BrowserRouter } from 'react-router-dom';
 import { useEffect } from 'react';
-import '@root/App.scss';
+import '@shared/styles/app.scss';
 import { socketService } from '@shared/services/socket/socket.service';
 import Toast from '@components/toast/Toast';
 import { useSelector } from 'react-redux';
