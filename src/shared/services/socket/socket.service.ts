@@ -1,10 +1,10 @@
 import { BASE_ENDPOINT } from '@shared/services/axios';
-import { io } from 'socket.io-client';
+import { io, Socket } from 'socket.io-client';
 
 class SocketService {
-  socket;
+  socket: Socket;
 
-  setupSocketConnection() {
+  constructor() {
     this.socket = io(BASE_ENDPOINT, {
       transports: ['websocket'],
       secure: true
