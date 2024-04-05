@@ -5,12 +5,13 @@ import { postService } from '@shared/services/api/post/post.service';
 import { PostUtils } from '@shared/services/utils/post-utils.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@pages/social/photos/Photos.scss';
 import ImageModal from '@components/image-modal/ImageModal';
 
 const Photos = () => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [posts, setPosts] = useState([]);
   const [following, setFollowing] = useState([]);
   const [imageUrl, setImageUrl] = useState('');
@@ -20,7 +21,7 @@ const Photos = () => {
   const [leftImageIndex, setLeftImageIndex] = useState();
   const [lastItemRight, setLastItemRight] = useState(false);
   const [lastItemLeft, setLastItemLeft] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getPostsWithImages = async () => {
     try {

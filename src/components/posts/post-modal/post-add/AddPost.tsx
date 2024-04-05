@@ -1,6 +1,7 @@
 import PostWrapper from '@components/posts/modal-wrappers/post-wrapper/PostWrapper';
 import { useState, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import '@components/posts/post-modal/post-add/AddPost.scss';
 import ModalBoxContent from '@components/posts/post-modal/modal-box-content/ModalBoxContent';
 import { FaArrowLeft, FaTimes } from 'react-icons/fa';
@@ -16,9 +17,9 @@ import { postService } from '@shared/services/api/post/post.service';
 import Spinner from '@components/spinner/Spinner';
 
 const AddPost = ({ selectedImage, selectedPostVideo }) => {
-  const { gifModalIsOpen, feeling } = useSelector((state) => state.modal);
-  const { gifUrl, image, privacy, video } = useSelector((state) => state.post);
-  const { profile } = useSelector((state) => state.user);
+  const { gifModalIsOpen, feeling } = useAppSelector((state) => state.modal);
+  const { gifUrl, image, privacy, video } = useAppSelector((state) => state.post);
+  const { profile } = useAppSelector((state) => state.user);
   const [loading, setLoading] = useState(false);
   const [hasVideo, setHasVideo] = useState(false);
   const [postImage, setPostImage] = useState('');
@@ -41,7 +42,7 @@ const AddPost = ({ selectedImage, selectedPostVideo }) => {
   const counterRef = useRef(null);
   const inputRef = useRef(null);
   const imageInputRef = useRef(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const maxNumberOfCharacters = 100;
 

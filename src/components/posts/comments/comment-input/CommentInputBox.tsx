@@ -1,7 +1,8 @@
 import Input from '@components/input/Input';
 import PropTypes from 'prop-types';
 import '@components/posts/comments/comment-input/CommentInputBox.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useEffect, useRef, useState } from 'react';
 import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep } from 'lodash';
@@ -9,10 +10,10 @@ import { socketService } from '@shared/services/socket/socket.service';
 import { postService } from '@shared/services/api/post/post.service';
 
 const CommentInputBox = ({ post }) => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [comment, setComment] = useState('');
   const commentInputRef = useRef(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const submitComment = async (event) => {
     event.preventDefault();

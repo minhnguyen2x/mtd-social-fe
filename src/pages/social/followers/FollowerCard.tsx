@@ -4,7 +4,8 @@ import '@pages/social/followers/Followers.scss';
 import { FaUserPlus } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { followerService } from '@shared/services/api/followers/follower.service';
 import { Utils } from '@shared/services/utils/utils.service';
@@ -14,11 +15,11 @@ import { socketService } from '@shared/services/socket/socket.service';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 
 const FollowerCard = ({ userData }) => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [followers, setFollowers] = useState([]);
   const [user, setUser] = useState(userData);
   const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [searchParams] = useSearchParams();
   const { username } = useParams();
 

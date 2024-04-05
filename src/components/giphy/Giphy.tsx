@@ -4,17 +4,18 @@ import { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import '@components/giphy/Giphy.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 import Spinner from '@components/spinner/Spinner';
 import { Utils } from '@shared/services/utils/utils.service';
 
 const Giphy = () => {
-  const { gifModalIsOpen } = useSelector((state) => state.modal);
+  const { gifModalIsOpen } = useAppSelector((state) => state.modal);
   const [gifs, setGifs] = useState([]);
   const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const selectGif = (gif) => {
     dispatch(updatePostItem({ gifUrl: gif, image: '', video: '' }));

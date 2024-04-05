@@ -1,11 +1,12 @@
 import { addPostFeeling, toggleFeelingModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 import { feelingsList } from '@shared/services/utils/static.data';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import '@components/feelings/Feelings.scss';
 
 const Feelings = () => {
-  const { feelingsIsOpen } = useSelector((state) => state.modal);
-  const dispatch = useDispatch();
+  const { feelingsIsOpen } = useAppSelector((state) => state.modal);
+  const dispatch = useAppDispatch();
 
   const selectFeeling = (feeling) => {
     dispatch(addPostFeeling({ feeling }));

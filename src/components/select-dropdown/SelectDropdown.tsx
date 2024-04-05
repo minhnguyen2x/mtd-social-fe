@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 import '@components/select-dropdown/SelectDropdown.scss';
 
 const SelectDropdown = ({ isActive, setSelectedItem, items = [] }) => {
   const dropdownRef = useRef(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const selectItem = (item) => {
     setSelectedItem(item);

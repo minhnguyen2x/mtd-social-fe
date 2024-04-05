@@ -10,14 +10,15 @@ import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
 import { ProfileUtils } from '@shared/services/utils/profile-utils.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useNavigate } from 'react-router-dom';
 
 const Following = () => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [following, setFollowing] = useState([]);
   const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const getUserFollowing = async () => {

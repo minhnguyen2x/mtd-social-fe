@@ -6,7 +6,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { cloneDeep, filter, find } from 'lodash';
 import { Utils } from '@shared/services/utils/utils.service';
 import { reactionsMap } from '@shared/services/utils/static.data';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 import { socketService } from '@shared/services/socket/socket.service';
@@ -14,12 +15,12 @@ import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { clearPost, updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 
 const CommentArea = ({ post }) => {
-  const { profile } = useSelector((state) => state.user);
-  let { reactions } = useSelector((state) => state.userPostReactions);
+  const { profile } = useAppSelector((state) => state.user);
+  let { reactions } = useAppSelector((state) => state.userPostReactions);
   const [userSelectedReaction, setUserSelectedReaction] = useState('like');
   const selectedPostId = useLocalStorage('selectedPostId', 'get');
   const [setSelectedPostId] = useLocalStorage('selectedPostId', 'set');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const selectedUserReaction = useCallback(
     (postReactions) => {

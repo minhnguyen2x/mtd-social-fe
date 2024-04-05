@@ -5,20 +5,21 @@ import video from '@shared/assets/images/video.png';
 import Input from '@components/input/Input';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import Feelings from '@components/feelings/Feelings';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import PropTypes from 'prop-types';
 import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 
 const ModalBoxSelection = ({ setSelectedPostImage, setSelectedVideo }) => {
-  const { feelingsIsOpen, gifModalIsOpen } = useSelector((state) => state.modal);
-  const { post } = useSelector((state) => state.post);
+  const { feelingsIsOpen, gifModalIsOpen } = useAppSelector((state) => state.modal);
+  const { post } = useAppSelector((state) => state.post);
   const feelingsRef = useRef(null);
   const fileInputRef = useRef();
   const videoInputRef = useRef();
   const [toggleFeelings, setToggleFeelings] = useDetectOutsideClick(feelingsRef, feelingsIsOpen);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const fileInputClicked = () => {
     fileInputRef.current.click();

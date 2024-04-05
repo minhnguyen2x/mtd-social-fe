@@ -7,7 +7,7 @@ import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useNavigate } from 'react-router-dom';
 
 const ChangePassword = () => {
@@ -19,7 +19,7 @@ const ChangePassword = () => {
   const [deleteStorageUsername] = useLocalStorage('username', 'delete');
   const [setLoggedIn] = useLocalStorage('keepLoggedIn', 'set');
   const [deleteSessionPageReload] = useSessionStorage('pageReload', 'delete');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const togglePasswordDisplay = () => {

@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@pages/social/streams/Streams.scss';
 import Suggestions from '@components/suggestions/Suggestions';
 import { getUserSuggestions } from '@shared/redux-toolkit/api/suggestion';
@@ -17,7 +18,7 @@ import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reac
 import { followerService } from '@shared/services/api/followers/follower.service';
 
 const Streams = () => {
-  const { allPosts } = useSelector((state) => state);
+  const { allPosts } = useAppSelector((state) => state);
   const [posts, setPosts] = useState([]);
   const [following, setFollowing] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,7 @@ const Streams = () => {
   const bodyRef = useRef(null);
   const bottomLineRef = useRef();
   let appPosts = useRef([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const storedUsername = useLocalStorage('username', 'get');
   const [deleteSelectedPostId] = useLocalStorage('selectedPostId', 'delete');
   useInfiniteScroll(bodyRef, bottomLineRef, fetchPostData);

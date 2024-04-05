@@ -2,7 +2,8 @@ import Avatar from '@components/avatar/Avatar';
 import Input from '@components/input/Input';
 import { Utils } from '@shared/services/utils/utils.service';
 import { FaSearch, FaTimes } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@components/chat/list/ChatList.scss';
 import SearchList from '@components/chat/list/search-list/SearchList';
 import { useCallback, useEffect, useState } from 'react';
@@ -17,8 +18,8 @@ import { timeAgo } from '@shared/services/utils/timeago.utils';
 import ChatListBody from '@components/chat/list/ChatListBody';
 
 const ChatList = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { chatList } = useSelector((state) => state.chat);
+  const { profile } = useAppSelector((state) => state.user);
+  const { chatList } = useAppSelector((state) => state.chat);
   const [search, setSearch] = useState('');
   const [searchResult, setSearchResult] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -27,7 +28,7 @@ const ChatList = () => {
   let [chatMessageList, setChatMessageList] = useState([]);
   const [rendered, setRendered] = useState(false);
   const debouncedValue = useDebounce(search, 1000);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();

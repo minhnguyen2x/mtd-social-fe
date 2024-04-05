@@ -14,11 +14,12 @@ import { Utils } from '@shared/services/utils/utils.service';
 import { uniqBy } from 'lodash';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FaCircle } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useNavigate } from 'react-router-dom';
 
 const People = () => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [users, setUsers] = useState([]);
   const [following, setFollowing] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
@@ -27,7 +28,7 @@ const People = () => {
   const [totalUsersCount, setTotalUsersCount] = useState(0);
   const bodyRef = useRef(null);
   const bottomLineRef = useRef(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   useInfiniteScroll(bodyRef, bottomLineRef, fetchData);
 

@@ -6,18 +6,19 @@ import CardElementStats from '@components/card-element/CardElementStats';
 import { ProfileUtils } from '@shared/services/utils/profile-utils.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useNavigate } from 'react-router-dom';
 import { followerService } from '@shared/services/api/followers/follower.service';
 import { socketService } from '@shared/services/socket/socket.service';
 import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
 
 const Followers = () => {
-  const { profile, token } = useSelector((state) => state.user);
+  const { profile, token } = useAppSelector((state) => state.user);
   const [followers, setFollowers] = useState([]);
   const [blockedUsers, setBlockedUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const getUserFollowers = useCallback(async () => {

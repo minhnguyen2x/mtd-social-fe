@@ -3,11 +3,12 @@ import ChatWindow from '@components/chat/window/ChatWindow';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import '@pages/social/chat/Chat.scss';
 import { getConversationList } from '@shared/redux-toolkit/api/chat';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
 const Chat = () => {
-  const { selectedChatUser, chatList } = useSelector((state) => state.chat);
-  const dispatch = useDispatch();
+  const { selectedChatUser, chatList } = useAppSelector((state) => state.chat);
+  const dispatch = useAppDispatch();
 
   useEffectOnce(() => {
     dispatch(getConversationList());

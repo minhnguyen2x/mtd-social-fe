@@ -1,6 +1,7 @@
 import PostWrapper from '@components/posts/modal-wrappers/post-wrapper/PostWrapper';
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import '@components/posts/post-modal/post-edit/EditPost.scss';
 import ModalBoxContent from '@components/posts/post-modal/modal-box-content/ModalBoxContent';
 import { FaArrowLeft, FaTimes } from 'react-icons/fa';
@@ -16,9 +17,9 @@ import { find } from 'lodash';
 import { Utils } from '@shared/services/utils/utils.service';
 
 const EditPost = () => {
-  const { gifModalIsOpen, feeling } = useSelector((state) => state.modal);
-  const { post } = useSelector((state) => state);
-  const { profile } = useSelector((state) => state.user);
+  const { gifModalIsOpen, feeling } = useAppSelector((state) => state.modal);
+  const { post } = useAppSelector((state) => state);
+  const { profile } = useAppSelector((state) => state.user);
   const [loading, setLoading] = useState(false);
   const [hasVideo, setHasVideo] = useState(false);
   const [postImage, setPostImage] = useState('');
@@ -45,7 +46,7 @@ const EditPost = () => {
   const counterRef = useRef(null);
   const inputRef = useRef(null);
   const imageInputRef = useRef(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const maxNumberOfCharacters = 100;
 

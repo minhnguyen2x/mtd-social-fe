@@ -3,7 +3,8 @@ import Avatar from '@components/avatar/Avatar';
 import '@pages/social/notifications/Notification.scss';
 import { FaCircle, FaRegCircle, FaRegTrashAlt } from 'react-icons/fa';
 import { Utils } from '@shared/services/utils/utils.service';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { notificationService } from '@shared/services/api/notifications/notification.service';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { NotificationUtils } from '@shared/services/utils/notification-utils.service';
@@ -11,7 +12,7 @@ import NotificationPreview from '@components/dialog/NotificationPreview';
 import { timeAgo } from '@shared/services/utils/timeago.utils';
 
 const Notification = () => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [notificationDialogContent, setNotificationDialogContent] = useState({
@@ -21,7 +22,7 @@ const Notification = () => {
     reaction: '',
     senderName: ''
   });
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getUserNotifications = async () => {
     try {

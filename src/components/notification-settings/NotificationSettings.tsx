@@ -7,13 +7,14 @@ import { notificationItems } from '@shared/services/utils/static.data';
 import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep } from 'lodash';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 
 const NotificationSettings = () => {
-  let { profile } = useSelector((state) => state.user);
+  let { profile } = useAppSelector((state) => state.user);
   const [notificationTypes, setNotificationTypes] = useState([]);
   let [notificationSettings, setNotificationSettings] = useState(profile?.notifications);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const mapNotificationTypesToggle = useCallback(
     (notifications) => {

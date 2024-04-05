@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { sideBarItems, fontAwesomeIcons } from '@shared/services/utils/static.data';
 import { useLocation, createSearchParams, useNavigate } from 'react-router-dom';
 import '@components//sidebar/Sidebar.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { getPosts } from '@shared/redux-toolkit/api/posts';
 import { Utils } from '@shared/services/utils/utils.service';
 import { ChatUtils } from '@shared/services/utils/chat-utils.service';
@@ -10,13 +11,13 @@ import { chatService } from '@shared/services/api/chat/chat.service';
 import { socketService } from '@shared/services/socket/socket.service';
 
 const Sidebar = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { chatList } = useSelector((state) => state.chat);
+  const { profile } = useAppSelector((state) => state.user);
+  const { chatList } = useAppSelector((state) => state.chat);
   const [sidebar, setSideBar] = useState([]);
   const [chatPageName, setChatPageName] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const checkUrl = (name) => {
     return location.pathname.includes(name.toLowerCase());

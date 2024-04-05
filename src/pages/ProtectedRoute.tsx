@@ -5,13 +5,14 @@ import { addUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
 import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useCallback, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { Navigate, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getConversationList } from '@shared/redux-toolkit/api/chat';
 
 const ProtectedRoute = ({ children }) => {
-  const { profile, token } = useSelector((state) => state.user);
+  const { profile, token } = useAppSelector((state) => state.user);
   const [userData, setUserData] = useState(null);
   const [tokenIsValid, setTokenIsValid] = useState(false);
   const keepLoggedIn = useLocalStorage('keepLoggedIn', 'get');
@@ -19,7 +20,7 @@ const ProtectedRoute = ({ children }) => {
   const [deleteStorageUsername] = useLocalStorage('username', 'delete');
   const [setLoggedIn] = useLocalStorage('keepLoggedIn', 'set');
   const [deleteSessionPageReload] = useSessionStorage('pageReload', 'delete');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const checkUser = useCallback(async () => {

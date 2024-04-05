@@ -11,15 +11,16 @@ import { userService } from '@shared/services/api/user/user.service';
 import { tabItems } from '@shared/services/utils/static.data';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { filter } from 'lodash';
 import ImageModal from '@components/image-modal/ImageModal';
 import Dialog from '@components/dialog/Dialog';
 
 const Profile = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { deleteDialogIsOpen, data } = useSelector((state) => state.modal);
+  const { profile } = useAppSelector((state) => state.user);
+  const { deleteDialogIsOpen, data } = useAppSelector((state) => state.modal);
   const [user, setUser] = useState();
   const [rendered, setRendered] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -33,7 +34,7 @@ const Profile = () => {
   const [loading, setLoading] = useState(true);
   const [showImageModal, setShowImageModal] = useState(false);
   const [userProfileData, setUserProfileData] = useState(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { username } = useParams();
   const [searchParams] = useSearchParams();
 

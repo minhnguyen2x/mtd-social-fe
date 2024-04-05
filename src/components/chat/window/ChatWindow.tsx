@@ -1,5 +1,6 @@
 import Avatar from '@components/avatar/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import '@components/chat/window/ChatWindow.scss';
 import MessageInput from '@components/chat/window/message-input/MessageInput';
 import { useCallback, useEffect, useState } from 'react';
@@ -12,15 +13,15 @@ import { some } from 'lodash';
 import MessageDisplay from '@components/chat/window/message-display/MessageDisplay';
 
 const ChatWindow = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { isLoading } = useSelector((state) => state.chat);
+  const { profile } = useAppSelector((state) => state.user);
+  const { isLoading } = useAppSelector((state) => state.chat);
   const [receiver, setReceiver] = useState();
   const [conversationId, setConversationId] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [searchParams] = useSearchParams();
   const [rendered, setRendered] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getChatMessages = useCallback(
     async (receiverId) => {

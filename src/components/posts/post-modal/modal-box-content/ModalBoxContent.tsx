@@ -4,13 +4,13 @@ import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { privacyList } from '@shared/services/utils/static.data';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { find } from 'lodash';
 
 const ModalBoxContent = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { privacy } = useSelector((state) => state.post);
-  const { feeling } = useSelector((state) => state.modal);
+  const { profile } = useAppSelector((state) => state.user);
+  const { privacy } = useAppSelector((state) => state.post);
+  const { feeling } = useAppSelector((state) => state.modal);
   const privacyRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState({
     topText: 'Public',

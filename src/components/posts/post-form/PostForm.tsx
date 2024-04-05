@@ -1,6 +1,7 @@
 import Avatar from '@components/avatar/Avatar';
 import Input from '@components/input/Input';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import photo from '@shared/assets/images/photo.png';
 import gif from '@shared/assets/images/gif.png';
 import feeling from '@shared/assets/images/feeling.png';
@@ -19,15 +20,15 @@ import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import EditPost from '@components/posts/post-modal/post-edit/EditPost';
 
 const PostForm = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { type, isOpen, openFileDialog, gifModalIsOpen, feelingsIsOpen, openVideoDialog } = useSelector(
+  const { profile } = useAppSelector((state) => state.user);
+  const { type, isOpen, openFileDialog, gifModalIsOpen, feelingsIsOpen, openVideoDialog } = useAppSelector(
     (state) => state.modal
   );
   const [selectedPostImage, setSelectedPostImage] = useState();
   const [selectedPostVideo, setSelectedPostVideo] = useState();
   const fileInputRef = useRef();
   const videoInputRef = useRef();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const openPostModal = () => {
     dispatch(openModal({ type: 'add' }));

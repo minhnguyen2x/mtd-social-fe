@@ -3,10 +3,10 @@ import InfoDisplay from '@components/timeline/InfoDisplay';
 import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
 const BasicInfo = ({ editableInputs, username, profile, loading, setEditableInputs }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const noBasicInfo = {
     quoteMsg: 'No information',
     workMsg: 'No information',

@@ -6,7 +6,8 @@ import { find } from 'lodash';
 import { feelingsList, privacyList } from '@shared/services/utils/static.data';
 import '@components/posts/post/Post.scss';
 import PostCommentSection from '@components/posts/post-comment-section/PostCommentSection';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import ReactionsModal from '@components/posts/reactions/reactions-modal/ReactionsModal';
 import { Utils } from '@shared/services/utils/utils.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
@@ -21,13 +22,13 @@ import { postService } from '@shared/services/api/post/post.service';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';
 
 const Post = ({ post, showIcons }) => {
-  const { _id } = useSelector((state) => state.post);
-  const { reactionsModalIsOpen, commentsModalIsOpen, deleteDialogIsOpen } = useSelector((state) => state.modal);
+  const { _id } = useAppSelector((state) => state.post);
+  const { reactionsModalIsOpen, commentsModalIsOpen, deleteDialogIsOpen } = useAppSelector((state) => state.modal);
   const [showImageModal, setShowImageModal] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [backgroundImageColor, setBackgroundImageColor] = useState('');
   const selectedPostId = useLocalStorage('selectedPostId', 'get');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getFeeling = (name) => {
     const feeling = find(feelingsList, (data) => data.name === name);

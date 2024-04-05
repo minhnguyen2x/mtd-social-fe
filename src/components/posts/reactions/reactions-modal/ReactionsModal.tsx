@@ -8,18 +8,19 @@ import { reactionsColor, reactionsMap } from '@shared/services/utils/static.data
 import { Utils } from '@shared/services/utils/utils.service';
 import { filter, orderBy, some } from 'lodash';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@components/posts/reactions/reactions-modal/ReactionsModal.scss';
 
 const ReactionsModal = () => {
-  const { _id, reactions } = useSelector((state) => state.post);
+  const { _id, reactions } = useAppSelector((state) => state.post);
   const [activeViewAllTab, setActiveViewAllTab] = useState(true);
   const [formattedReactions, setFormattedReactions] = useState([]);
   const [reactionType, setReactionType] = useState('');
   const [reactionColor, setReactionColor] = useState('');
   const [postReactions, setPostReactions] = useState([]);
   const [reactionsOfPost, setReactionsOfPost] = useState([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getPostReactions = async () => {
     try {

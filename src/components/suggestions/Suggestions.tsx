@@ -1,7 +1,8 @@
 import Avatar from '@components/avatar/Avatar';
 import Button from '@components/button/Button';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useNavigate } from 'react-router-dom';
 import '@components/suggestions/Suggestions.scss';
 import { Utils } from '@shared/services/utils/utils.service';
@@ -10,10 +11,10 @@ import { filter } from 'lodash';
 import { addToSuggestions } from '@shared/redux-toolkit/reducers/suggestions/suggestions.reducer';
 
 const Suggestions = () => {
-  const { suggestions } = useSelector((state) => state);
+  const { suggestions } = useAppSelector((state) => state);
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const followUser = async (user) => {
     try {

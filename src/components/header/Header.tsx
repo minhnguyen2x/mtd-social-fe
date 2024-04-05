@@ -7,7 +7,8 @@ import Avatar from '@components/avatar/Avatar';
 import { Utils } from '@shared/services/utils/utils.service';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import MessageSidebar from '@components/message-sidebar/MessageSidebar';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import Dropdown from '@components/dropdown/Dropdown';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { ProfileUtils } from '@shared/services/utils/profile-utils.service';
@@ -26,8 +27,8 @@ import { chatService } from '@shared/services/api/chat/chat.service';
 import { getConversationList } from '@shared/redux-toolkit/api/chat';
 
 const Header = () => {
-  const { profile } = useSelector((state) => state.user);
-  const { chatList } = useSelector((state) => state.chat);
+  const { profile } = useAppSelector((state) => state.user);
+  const { chatList } = useAppSelector((state) => state.chat);
   const [environment, setEnvironment] = useState('');
   const [settings, setSettings] = useState([]);
   const [notifications, setNotifications] = useState([]);
@@ -45,7 +46,7 @@ const Header = () => {
   const notificationRef = useRef(null);
   const settingsRef = useRef(null);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const location = useLocation();
   const [isMessageActive, setIsMessageActive] = useDetectOutsideClick(messageRef, false);
   const [isNotificationActive, setIsNotificationActive] = useDetectOutsideClick(notificationRef, false);

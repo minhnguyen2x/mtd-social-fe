@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Input from '@components/input/Input';
 import Button from '@components/button/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@pages/auth/login/Login.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
@@ -23,7 +23,7 @@ const Login = () => {
   const [setLoggedIn] = useLocalStorage('keepLoggedIn', 'set');
   const [pageReload] = useSessionStorage('pageReload', 'set');
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const loginUser = async (event) => {
     setLoading(true);

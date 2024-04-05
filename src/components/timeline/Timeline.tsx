@@ -9,7 +9,8 @@ import { PostUtils } from '@shared/services/utils/post-utils.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useParams } from 'react-router-dom';
 import '@components/timeline/Timeline.scss';
 import BasicInfo from '@components/timeline/BasicInfo';
@@ -19,7 +20,7 @@ import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 
 const Timeline = ({ userProfileData, loading }) => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState();
   const [following, setFollowing] = useState([]);
@@ -36,7 +37,7 @@ const Timeline = ({ userProfileData, loading }) => {
     youtube: ''
   });
   const { username } = useParams();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const storedUsername = useLocalStorage('username', 'get');
 
   const getUserFollowing = async () => {

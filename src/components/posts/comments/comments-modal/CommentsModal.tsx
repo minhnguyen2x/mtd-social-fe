@@ -7,12 +7,13 @@ import { clearPost } from '@shared/redux-toolkit/reducers/post/post.reducer';
 import { postService } from '@shared/services/api/post/post.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 
 const CommentsModal = () => {
-  const { post } = useSelector((state) => state);
+  const { post } = useAppSelector((state) => state);
   const [postComments, setPostComments] = useState([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getPostComments = async () => {
     try {

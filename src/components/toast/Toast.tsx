@@ -4,13 +4,13 @@ import { cloneDeep } from 'lodash';
 
 import '@components/toast/Toast.scss';
 import { Utils } from '@shared/services/utils/utils.service';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
 const Toast = (props) => {
   const { toastList, position, autoDelete, autoDeleteTime = 2000 } = props;
   const [list, setList] = useState(toastList);
   const listData = useRef([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const deleteToast = useCallback(() => {
     listData.current = cloneDeep(list);

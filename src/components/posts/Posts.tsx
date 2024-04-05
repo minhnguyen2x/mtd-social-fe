@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import '@components/posts/Posts.scss';
-import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { Utils } from '@shared/services/utils/utils.service';
 import Post from '@components/posts/post/Post';
 import { PostUtils } from '@shared/services/utils/post-utils.service';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 
 const Posts = ({ allPosts, userFollowing, postsLoading }) => {
-  const { profile } = useSelector((state) => state.user);
+  const { profile } = useAppSelector((state) => state.user);
   const [posts, setPosts] = useState([]);
   const [following, setFollowing] = useState([]);
   const [loading, setLoading] = useState(true);

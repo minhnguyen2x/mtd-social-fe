@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import { FaSpinner } from 'react-icons/fa';
 import '@components/posts/reactions/reactions-and-comments-display/ReactionsAndCommentsDisplay.scss';
 import { Utils } from '@shared/services/utils/utils.service';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useEffect, useState } from 'react';
 import { postService } from '@shared/services/api/post/post.service';
 import { reactionsMap } from '@shared/services/utils/static.data';
@@ -10,11 +11,11 @@ import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer
 import { toggleCommentsModal, toggleReactionsModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 
 const ReactionsAndCommentsDisplay = ({ post }) => {
-  const { reactionsModalIsOpen, commentsModalIsOpen } = useSelector((state) => state.modal);
+  const { reactionsModalIsOpen, commentsModalIsOpen } = useAppSelector((state) => state.modal);
   const [postReactions, setPostReactions] = useState([]);
   const [reactions, setReactions] = useState([]);
   const [postCommentNames, setPostCommentNames] = useState([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const getPostReactions = async () => {
     try {
