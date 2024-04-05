@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { updatePostItem } from '@redux/reducers/post/post.reducer';
+import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 import '@components/select-dropdown/SelectDropdown.scss';
 
 const SelectDropdown = ({ isActive, setSelectedItem, items = [] }) => {

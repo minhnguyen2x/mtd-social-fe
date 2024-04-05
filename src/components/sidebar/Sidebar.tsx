@@ -3,7 +3,7 @@ import { sideBarItems, fontAwesomeIcons } from '@shared/services/utils/static.da
 import { useLocation, createSearchParams, useNavigate } from 'react-router-dom';
 import '@components//sidebar/Sidebar.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPosts } from '@redux/api/posts';
+import { getPosts } from '@shared/redux-toolkit/api/posts';
 import { Utils } from '@shared/services/utils/utils.service';
 import { ChatUtils } from '@shared/services/utils/chat-utils.service';
 import { chatService } from '@shared/services/api/chat/chat.service';

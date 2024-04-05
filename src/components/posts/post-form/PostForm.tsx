@@ -12,7 +12,7 @@ import {
   toggleGifModal,
   toggleImageModal,
   toggleVideoModal
-} from '@redux/reducers/modal/modal.reducer';
+} from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 import AddPost from '@components/posts/post-modal/post-add/AddPost';
 import { useRef, useState } from 'react';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';

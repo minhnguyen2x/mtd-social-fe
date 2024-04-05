@@ -1,4 +1,4 @@
-import { getUserSuggestions } from '@redux/api/suggestion';
+import { getUserSuggestions } from '@shared/redux-toolkit/api/suggestion';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {

@@ -5,8 +5,8 @@ import { FaSearch } from 'react-icons/fa';
 
 import '@components/giphy/Giphy.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { updatePostItem } from '@redux/reducers/post/post.reducer';
-import { toggleGifModal } from '@redux/reducers/modal/modal.reducer';
+import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
+import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 import Spinner from '@components/spinner/Spinner';
 import { Utils } from '@shared/services/utils/utils.service';
 

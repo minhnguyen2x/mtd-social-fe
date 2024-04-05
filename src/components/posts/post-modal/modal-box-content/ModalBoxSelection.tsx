@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Feelings from '@components/feelings/Feelings';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import PropTypes from 'prop-types';
-import { toggleGifModal } from '@redux/reducers/modal/modal.reducer';
+import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 
 const ModalBoxSelection = ({ setSelectedPostImage, setSelectedVideo }) => {
   const { feelingsIsOpen, gifModalIsOpen } = useSelector((state) => state.modal);

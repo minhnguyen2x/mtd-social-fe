@@ -1,5 +1,5 @@
-import { addNotification, clearNotification } from '@redux/reducers/notifications/notification.reducer';
-import { addUser, clearUser } from '@redux/reducers/user/user.reducer';
+import { addNotification, clearNotification } from '@shared/redux-toolkit/reducers/notifications/notification.reducer';
+import { addUser, clearUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
 import { APP_ENVIRONMENT } from '@shared/services/axios';
 import { avatarColors } from '@shared/services/utils/static.data';
 import { floor, random, some, findIndex } from 'lodash';

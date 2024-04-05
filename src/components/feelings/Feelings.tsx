@@ -1,4 +1,4 @@
-import { addPostFeeling, toggleFeelingModal } from '@redux/reducers/modal/modal.reducer';
+import { addPostFeeling, toggleFeelingModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
 import { feelingsList } from '@shared/services/utils/static.data';
 import { useDispatch, useSelector } from 'react-redux';
 import '@components/feelings/Feelings.scss';

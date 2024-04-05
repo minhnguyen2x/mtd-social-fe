@@ -8,10 +8,10 @@ import { Utils } from '@shared/services/utils/utils.service';
 import { reactionsMap } from '@shared/services/utils/static.data';
 import { useDispatch, useSelector } from 'react-redux';
 import { postService } from '@shared/services/api/post/post.service';
-import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
+import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 import { socketService } from '@shared/services/socket/socket.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
-import { clearPost, updatePostItem } from '@redux/reducers/post/post.reducer';
+import { clearPost, updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 
 const CommentArea = ({ post }) => {
   const { profile } = useSelector((state) => state.user);

@@ -1,4 +1,4 @@
-import { getPosts } from '@redux/api/posts';
+import { getPosts } from '@shared/redux-toolkit/api/posts';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {

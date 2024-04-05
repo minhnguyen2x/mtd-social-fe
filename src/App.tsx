@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 import '@shared/styles/app.scss';
 import { socketService } from '@shared/services/socket/socket.service';
 import Toast from '@components/toast/Toast';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@shared/hooks/use-app-selector';
 
-const App = () => {
-  const { notifications } = useSelector((state) => state);
+export const App = () => {
+  const { notifications } = useAppSelector((state) => state);
 
   useEffect(() => {
     socketService.setupSocketConnection();
@@ -24,4 +24,3 @@ const App = () => {
     </>
   );
 };
-export default App;

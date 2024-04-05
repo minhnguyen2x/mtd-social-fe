@@ -1,7 +1,7 @@
 import Button from '@components/button/Button';
 import '@components/notification-settings/NotificationSettings.scss';
 import Toggle from '@components/toggle/Toggle';
-import { updateUserProfile } from '@redux/reducers/user/user.reducer';
+import { updateUserProfile } from '@shared/redux-toolkit/reducers/user/user.reducer';
 import { userService } from '@shared/services/api/user/user.service';
 import { notificationItems } from '@shared/services/utils/static.data';
 import { Utils } from '@shared/services/utils/utils.service';

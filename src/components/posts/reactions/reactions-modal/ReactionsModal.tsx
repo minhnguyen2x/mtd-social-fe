@@ -1,8 +1,8 @@
 import ReactionWrapper from '@components/posts/modal-wrappers/reaction-wrapper/ReactionWrapper';
 import ReactionList from '@components/posts/reactions/reactions-modal/reaction-list/ReactionList';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
-import { closeModal } from '@redux/reducers/modal/modal.reducer';
-import { clearPost } from '@redux/reducers/post/post.reducer';
+import { closeModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { clearPost } from '@shared/redux-toolkit/reducers/post/post.reducer';
 import { postService } from '@shared/services/api/post/post.service';
 import { reactionsColor, reactionsMap } from '@shared/services/utils/static.data';
 import { Utils } from '@shared/services/utils/utils.service';

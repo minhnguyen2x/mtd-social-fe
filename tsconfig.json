@@ -28,9 +28,7 @@
 
       "@components/*": ["./components/*"],
       "@mocks/*": ["./mocks/*"],
-      "@redux/*": ["./redux-toolkit/*"],
-      "@root/*": ["./*"],
-      "@/*": ["./*"]
+      "@root/*": ["./*"]
     },
 
     // unknown
