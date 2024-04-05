@@ -39,7 +39,7 @@
     "lint:fix": "eslint 'src/**/*.js' --fix",
     "prettier:check": "prettier --check 'src/**/*.{js,jsx,json}'",
     "prettier:fix": "prettier --write 'src/**/*.{js,jsx,json}'",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "react-app-rewired test --coverage --forceExit --detectOpenHandles --watchAll=false"
   },
