@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaCheck, FaCircle } from 'react-icons/fa';
-import doubleCheckmark from '@assets/images/double-checkmark.png';
+import doubleCheckmark from '@shared/assets/images/double-checkmark.png';
 
 const ChatListBody = ({ data, profile }) => {
   return (

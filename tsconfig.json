@@ -24,10 +24,10 @@
     "paths": {
       "@features/*": ["./features/*"],
       "@shared/*": ["./shared/*"],
-      "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
+
+      "@components/*": ["./components/*"],
       "@mocks/*": ["./mocks/*"],
-      "@assets/*": ["./assets/*"],
       "@colors/*": ["./colors/*"],
       "@redux/*": ["./redux-toolkit/*"],
       "@root/*": ["./*"],

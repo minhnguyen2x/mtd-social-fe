@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import logo from '@assets/images/logo.svg';
+import logo from '@shared/assets/images/logo.svg';
 import { FaCaretDown, FaCaretUp, FaRegBell, FaRegEnvelope } from 'react-icons/fa';
 
 import '@components/header/Header.scss';

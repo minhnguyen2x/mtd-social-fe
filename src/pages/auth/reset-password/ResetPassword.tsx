@@ -4,7 +4,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import Input from '@components/input/Input';
 import Button from '@components/button/Button';
 import { Link, useSearchParams } from 'react-router-dom';
-import backgroundImage from '@assets/images/background.jpg';
+import backgroundImage from '@shared/assets/images/background.jpg';
 import { authService } from '@shared/services/api/auth/auth.service';
 
 const ResetPassword = () => {

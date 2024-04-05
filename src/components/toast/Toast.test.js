@@ -1,5 +1,5 @@
-import checkIcon from '@assets/images/check.svg';
-import errorIcon from '@assets/images/error.svg';
+import checkIcon from '@shared/assets/images/check.svg';
+import errorIcon from '@shared/assets/images/error.svg';
 import Toast from '@components/toast/Toast';
 import { render, screen, waitFor } from '@root/test.utils';
 import userEvent from '@testing-library/user-event';

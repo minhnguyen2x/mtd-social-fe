@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Input from '@components/input/Input';
 import Button from '@components/button/Button';
 import { Link } from 'react-router-dom';
-import backgroundImage from '@assets/images/background.jpg';
+import backgroundImage from '@shared/assets/images/background.jpg';
 import '@pages/auth/forgot-password/ForgotPassword.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
 

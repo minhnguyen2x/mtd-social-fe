@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import checkIcon from '@assets/images/check.svg';
-import errorIcon from '@assets/images/error.svg';
-import infoIcon from '@assets/images/info.svg';
-import warningIcon from '@assets/images/warning.svg';
+import checkIcon from '@shared/assets/images/check.svg';
+import errorIcon from '@shared/assets/images/error.svg';
+import infoIcon from '@shared/assets/images/info.svg';
+import warningIcon from '@shared/assets/images/warning.svg';
 import { cloneDeep, uniqBy } from 'lodash';
 
 const initialState = [];

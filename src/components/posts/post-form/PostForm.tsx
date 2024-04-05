@@ -1,10 +1,10 @@
 import Avatar from '@components/avatar/Avatar';
 import Input from '@components/input/Input';
 import { useDispatch, useSelector } from 'react-redux';
-import photo from '@assets/images/photo.png';
-import gif from '@assets/images/gif.png';
-import feeling from '@assets/images/feeling.png';
-import video from '@assets/images/video.png';
+import photo from '@shared/assets/images/photo.png';
+import gif from '@shared/assets/images/gif.png';
+import feeling from '@shared/assets/images/feeling.png';
+import video from '@shared/assets/images/video.png';
 import '@components/posts/post-form/PostForm.scss';
 import {
   openModal,

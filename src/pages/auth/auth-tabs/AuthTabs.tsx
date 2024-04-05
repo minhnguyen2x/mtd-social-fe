@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import '@pages/auth/auth-tabs/AuthTabs.scss';
-import backgroundImage from '@assets/images/background.jpg';
+import backgroundImage from '@shared/assets/images/background.jpg';
 import Login from '@pages/auth/login/Login';
 import Register from '@pages/auth/register/Register';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
