@@ -10,7 +10,7 @@ import '@components/chat/window/message-input/MessageInput.scss';
 import { useEffect, useRef, useState } from 'react';
 import GiphyContainer from '@components/chat/giphy-container/GiphyContainer';
 import ImagePreview from '@components/chat/image-preview/ImagePreview';
-import { ImageUtils } from '@services/utils/image-utils.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
 
 const EmojiPickerComponent = loadable(() => import('./EmojiPicker'), {
   fallback: <p id="loading">Loading...</p>

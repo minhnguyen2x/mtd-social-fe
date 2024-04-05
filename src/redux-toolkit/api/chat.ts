@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { chatService } from '@services/api/chat/chat.service';
-import { Utils } from '@services/utils/utils.service';
+import { chatService } from '@shared/services/api/chat/chat.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const getConversationList = createAsyncThunk('chat/getUserChatList', async (name, { dispatch }) => {
   try {

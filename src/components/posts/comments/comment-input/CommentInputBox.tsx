@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import '@components/posts/comments/comment-input/CommentInputBox.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef, useState } from 'react';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep } from 'lodash';
-import { socketService } from '@services/socket/socket.service';
-import { postService } from '@services/api/post/post.service';
+import { socketService } from '@shared/services/socket/socket.service';
+import { postService } from '@shared/services/api/post/post.service';
 
 const CommentInputBox = ({ post }) => {
   const { profile } = useSelector((state) => state.user);

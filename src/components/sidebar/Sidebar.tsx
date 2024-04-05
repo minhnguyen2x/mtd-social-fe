@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useState } from 'react';
-import { sideBarItems, fontAwesomeIcons } from '@services/utils/static.data';
+import { sideBarItems, fontAwesomeIcons } from '@shared/services/utils/static.data';
 import { useLocation, createSearchParams, useNavigate } from 'react-router-dom';
 import '@components//sidebar/Sidebar.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '@redux/api/posts';
-import { Utils } from '@services/utils/utils.service';
-import { ChatUtils } from '@services/utils/chat-utils.service';
-import { chatService } from '@services/api/chat/chat.service';
-import { socketService } from '@services/socket/socket.service';
+import { Utils } from '@shared/services/utils/utils.service';
+import { ChatUtils } from '@shared/services/utils/chat-utils.service';
+import { chatService } from '@shared/services/api/chat/chat.service';
+import { socketService } from '@shared/services/socket/socket.service';
 
 const Sidebar = () => {
   const { profile } = useSelector((state) => state.user);

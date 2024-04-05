@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import '@components/posts/Posts.scss';
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import Post from '@components/posts/post/Post';
-import { PostUtils } from '@services/utils/post-utils.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
 
 const Posts = ({ allPosts, userFollowing, postsLoading }) => {

@@ -1,7 +1,7 @@
 import { addUser } from '@redux/reducers/user/user.reducer';
-import { followerService } from '@services/api/followers/follower.service';
-import { socketService } from '@services/socket/socket.service';
-import { Utils } from '@services/utils/utils.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
+import { socketService } from '@shared/services/socket/socket.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep, filter, find, findIndex } from 'lodash';
 
 export class FollowersUtils {

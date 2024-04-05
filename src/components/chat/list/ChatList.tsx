@@ -1,19 +1,19 @@
 import Avatar from '@components/avatar/Avatar';
 import Input from '@components/input/Input';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import '@components/chat/list/ChatList.scss';
 import SearchList from '@components/chat/list/search-list/SearchList';
 import { useCallback, useEffect, useState } from 'react';
-import { userService } from '@services/api/user/user.service';
+import { userService } from '@shared/services/api/user/user.service';
 import useDebounce from '@shared/hooks/useDebounce';
-import { ChatUtils } from '@services/utils/chat-utils.service';
+import { ChatUtils } from '@shared/services/utils/chat-utils.service';
 import { cloneDeep, find, findIndex } from 'lodash';
 import { createSearchParams, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { setSelectedChatUser } from '@redux/reducers/chat/chat.reducer';
-import { chatService } from '@services/api/chat/chat.service';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { chatService } from '@shared/services/api/chat/chat.service';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 import ChatListBody from '@components/chat/list/ChatListBody';
 
 const ChatList = () => {

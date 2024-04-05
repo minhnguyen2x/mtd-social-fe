@@ -1,7 +1,7 @@
 import BackgroundHeaderSkeleton from '@components/background-header/BackgroundHeaderSkeleton';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
 import PostFormSkeleton from '@components/posts/post-form/PostFormSkeleton';
-import { tabItems } from '@services/utils/static.data';
+import { tabItems } from '@shared/services/utils/static.data';
 
 const ProfileSkeleton = () => {
   return (

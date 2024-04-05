@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { emptyPostData } from '@services/utils/static.data';
+import { emptyPostData } from '@shared/services/utils/static.data';
 
 const initialState = emptyPostData;
 

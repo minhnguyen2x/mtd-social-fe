@@ -4,15 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import '@components/posts/post-modal/post-add/AddPost.scss';
 import ModalBoxContent from '@components/posts/post-modal/modal-box-content/ModalBoxContent';
 import { FaArrowLeft, FaTimes } from 'react-icons/fa';
-import { bgColors } from '@services/utils/static.data';
+import { bgColors } from '@shared/services/utils/static.data';
 import ModalBoxSelection from '@components/posts/post-modal/modal-box-content/ModalBoxSelection';
 import Button from '@components/button/Button';
-import { PostUtils } from '@services/utils/post-utils.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
 import { closeModal, toggleGifModal } from '@redux/reducers/modal/modal.reducer';
 import Giphy from '@components/giphy/Giphy';
 import PropTypes from 'prop-types';
-import { ImageUtils } from '@services/utils/image-utils.service';
-import { postService } from '@services/api/post/post.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
+import { postService } from '@shared/services/api/post/post.service';
 import Spinner from '@components/spinner/Spinner';
 
 const AddPost = ({ selectedImage, selectedPostVideo }) => {

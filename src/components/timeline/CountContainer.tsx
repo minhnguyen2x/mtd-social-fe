@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import CountContainerSkeleton from '@components/timeline/CountContainerSkeleton';
 import '@components/timeline/Timeline.scss';
 

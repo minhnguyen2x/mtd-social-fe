@@ -4,10 +4,10 @@ import '@components/chat/window/ChatWindow.scss';
 import MessageInput from '@components/chat/window/message-input/MessageInput';
 import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Utils } from '@services/utils/utils.service';
-import { userService } from '@services/api/user/user.service';
-import { ChatUtils } from '@services/utils/chat-utils.service';
-import { chatService } from '@services/api/chat/chat.service';
+import { Utils } from '@shared/services/utils/utils.service';
+import { userService } from '@shared/services/api/user/user.service';
+import { ChatUtils } from '@shared/services/utils/chat-utils.service';
+import { chatService } from '@shared/services/api/chat/chat.service';
 import { some } from 'lodash';
 import MessageDisplay from '@components/chat/window/message-display/MessageDisplay';
 

@@ -1,7 +1,7 @@
 import Avatar from '@components/avatar/Avatar';
 import Reactions from '@components/posts/reactions/Reactions';
-import { reactionsMap } from '@services/utils/static.data';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { reactionsMap } from '@shared/services/utils/static.data';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 import PropTypes from 'prop-types';
 
 const LeftMessageDisplay = ({

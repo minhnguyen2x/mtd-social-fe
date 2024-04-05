@@ -1,4 +1,4 @@
-import { BASE_ENDPOINT } from '@services/axios';
+import { BASE_ENDPOINT } from '@shared/services/axios';
 import { io } from 'socket.io-client';
 
 class SocketService {

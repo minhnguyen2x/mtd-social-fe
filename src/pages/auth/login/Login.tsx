@@ -5,9 +5,9 @@ import Button from '@components/button/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import '@pages/auth/login/Login.scss';
-import { authService } from '@services/api/auth/auth.service';
+import { authService } from '@shared/services/api/auth/auth.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import useSessionStorage from '@shared/hooks/useSessionStorage';
 
 const Login = () => {

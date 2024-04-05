@@ -4,16 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import '@components/posts/post-modal/post-edit/EditPost.scss';
 import ModalBoxContent from '@components/posts/post-modal/modal-box-content/ModalBoxContent';
 import { FaArrowLeft, FaTimes } from 'react-icons/fa';
-import { bgColors, feelingsList } from '@services/utils/static.data';
+import { bgColors, feelingsList } from '@shared/services/utils/static.data';
 import ModalBoxSelection from '@components/posts/post-modal/modal-box-content/ModalBoxSelection';
 import Button from '@components/button/Button';
-import { PostUtils } from '@services/utils/post-utils.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
 import { addPostFeeling, closeModal, toggleGifModal } from '@redux/reducers/modal/modal.reducer';
 import Giphy from '@components/giphy/Giphy';
-import { ImageUtils } from '@services/utils/image-utils.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import Spinner from '@components/spinner/Spinner';
 import { find } from 'lodash';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const EditPost = () => {
   const { gifModalIsOpen, feeling } = useSelector((state) => state.modal);

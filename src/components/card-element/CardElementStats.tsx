@@ -1,4 +1,4 @@
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
 
 const CardElementStats = ({ postsCount, followersCount, followingCount }) => {

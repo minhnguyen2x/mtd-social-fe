@@ -1,8 +1,8 @@
-import { notificationService } from '@services/api/notifications/notification.service';
-import { socketService } from '@services/socket/socket.service';
-import { Utils } from '@services/utils/utils.service';
+import { notificationService } from '@shared/services/api/notifications/notification.service';
+import { socketService } from '@shared/services/socket/socket.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep, find, findIndex, remove, sumBy } from 'lodash';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 
 export class NotificationUtils {
   static socketIONotification(profile, notifications, setNotifications, type, setNotificationsCount) {

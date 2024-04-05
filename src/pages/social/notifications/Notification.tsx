@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import Avatar from '@components/avatar/Avatar';
 import '@pages/social/notifications/Notification.scss';
 import { FaCircle, FaRegCircle, FaRegTrashAlt } from 'react-icons/fa';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { useDispatch, useSelector } from 'react-redux';
-import { notificationService } from '@services/api/notifications/notification.service';
+import { notificationService } from '@shared/services/api/notifications/notification.service';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
-import { NotificationUtils } from '@services/utils/notification-utils.service';
+import { NotificationUtils } from '@shared/services/utils/notification-utils.service';
 import NotificationPreview from '@components/dialog/NotificationPreview';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 
 const Notification = () => {
   const { profile } = useSelector((state) => state.user);

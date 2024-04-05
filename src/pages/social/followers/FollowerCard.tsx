@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useSearchParams } from 'react-router-dom';
-import { followerService } from '@services/api/followers/follower.service';
-import { Utils } from '@services/utils/utils.service';
-import { userService } from '@services/api/user/user.service';
-import { FollowersUtils } from '@services/utils/followers-utils.service';
-import { socketService } from '@services/socket/socket.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
+import { Utils } from '@shared/services/utils/utils.service';
+import { userService } from '@shared/services/api/user/user.service';
+import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
+import { socketService } from '@shared/services/socket/socket.service';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 
 const FollowerCard = ({ userData }) => {

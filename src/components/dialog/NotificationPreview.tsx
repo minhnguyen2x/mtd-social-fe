@@ -1,5 +1,5 @@
 import Button from '@components/button/Button';
-import { reactionsMap } from '@services/utils/static.data';
+import { reactionsMap } from '@shared/services/utils/static.data';
 import PropTypes from 'prop-types';
 
 import '@components/dialog/NotificationPreview.scss';

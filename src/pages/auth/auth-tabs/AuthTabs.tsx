@@ -5,7 +5,7 @@ import Login from '@pages/auth/login/Login';
 import Register from '@pages/auth/register/Register';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import PageLoader from '@components/page-loader/PageLoader';
 
 const AuthTabs = () => {

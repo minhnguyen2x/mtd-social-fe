@@ -5,7 +5,7 @@ import Input from '@components/input/Input';
 import Button from '@components/button/Button';
 import { Link, useSearchParams } from 'react-router-dom';
 import backgroundImage from '@assets/images/background.jpg';
-import { authService } from '@services/api/auth/auth.service';
+import { authService } from '@shared/services/api/auth/auth.service';
 
 const ResetPassword = () => {
   const [password, setPassword] = useState('');

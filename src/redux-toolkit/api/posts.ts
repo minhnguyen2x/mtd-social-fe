@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { postService } from '@services/api/post/post.service';
-import { Utils } from '@services/utils/utils.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const getPosts = createAsyncThunk('post/getPosts', async (name, { dispatch }) => {
   try {

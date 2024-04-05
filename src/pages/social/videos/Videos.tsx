@@ -1,9 +1,9 @@
 import '@pages/social/videos/Videos.scss';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
-import { followerService } from '@services/api/followers/follower.service';
-import { postService } from '@services/api/post/post.service';
-import { PostUtils } from '@services/utils/post-utils.service';
-import { Utils } from '@services/utils/utils.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 

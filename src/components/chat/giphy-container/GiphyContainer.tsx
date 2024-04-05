@@ -1,7 +1,7 @@
 import Input from '@components/input/Input';
 import Spinner from '@components/spinner/Spinner';
-import { GiphyUtils } from '@services/utils/giphy-utils.service';
-import { Utils } from '@services/utils/utils.service';
+import { GiphyUtils } from '@shared/services/utils/giphy-utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';

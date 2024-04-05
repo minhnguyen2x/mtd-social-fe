@@ -25,7 +25,6 @@
       "@features/*": ["./features/*"],
       "@shared/*": ["./shared/*"],
       "@components/*": ["./components/*"],
-      "@services/*": ["./services/*"],
       "@pages/*": ["./pages/*"],
       "@mocks/*": ["./mocks/*"],
       "@assets/*": ["./assets/*"],

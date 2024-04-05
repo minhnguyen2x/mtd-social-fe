@@ -1,7 +1,7 @@
 import { addNotification, clearNotification } from '@redux/reducers/notifications/notification.reducer';
 import { addUser, clearUser } from '@redux/reducers/user/user.reducer';
-import { APP_ENVIRONMENT } from '@services/axios';
-import { avatarColors } from '@services/utils/static.data';
+import { APP_ENVIRONMENT } from '@shared/services/axios';
+import { avatarColors } from '@shared/services/utils/static.data';
 import { floor, random, some, findIndex } from 'lodash';
 import millify from 'millify';
 

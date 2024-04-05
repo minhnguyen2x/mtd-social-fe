@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '@components/suggestions/Suggestions.scss';
-import { Utils } from '@services/utils/utils.service';
-import { FollowersUtils } from '@services/utils/followers-utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
+import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
 import { filter } from 'lodash';
 import { addToSuggestions } from '@redux/reducers/suggestions/suggestions.reducer';
 

@@ -4,12 +4,12 @@ import '@components/posts/comment-area/CommentArea.scss';
 import Reactions from '@components/posts/reactions/Reactions';
 import { useCallback, useEffect, useState } from 'react';
 import { cloneDeep, filter, find } from 'lodash';
-import { Utils } from '@services/utils/utils.service';
-import { reactionsMap } from '@services/utils/static.data';
+import { Utils } from '@shared/services/utils/utils.service';
+import { reactionsMap } from '@shared/services/utils/static.data';
 import { useDispatch, useSelector } from 'react-redux';
-import { postService } from '@services/api/post/post.service';
+import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
-import { socketService } from '@services/socket/socket.service';
+import { socketService } from '@shared/services/socket/socket.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { clearPost, updatePostItem } from '@redux/reducers/post/post.reducer';
 

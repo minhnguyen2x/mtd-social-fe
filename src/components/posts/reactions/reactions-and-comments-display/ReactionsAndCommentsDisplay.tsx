@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { FaSpinner } from 'react-icons/fa';
 import '@components/posts/reactions/reactions-and-comments-display/ReactionsAndCommentsDisplay.scss';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { postService } from '@services/api/post/post.service';
-import { reactionsMap } from '@services/utils/static.data';
+import { postService } from '@shared/services/api/post/post.service';
+import { reactionsMap } from '@shared/services/utils/static.data';
 import { updatePostItem } from '@redux/reducers/post/post.reducer';
 import { toggleCommentsModal, toggleReactionsModal } from '@redux/reducers/modal/modal.reducer';
 

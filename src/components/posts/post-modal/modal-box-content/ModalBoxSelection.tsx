@@ -7,7 +7,7 @@ import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Feelings from '@components/feelings/Feelings';
-import { ImageUtils } from '@services/utils/image-utils.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import PropTypes from 'prop-types';
 import { toggleGifModal } from '@redux/reducers/modal/modal.reducer';
 

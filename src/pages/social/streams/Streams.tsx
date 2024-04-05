@@ -6,15 +6,15 @@ import { getUserSuggestions } from '@redux/api/suggestion';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import PostForm from '@components/posts/post-form/PostForm';
 import Posts from '@components/posts/Posts';
-import { Utils } from '@services/utils/utils.service';
-import { postService } from '@services/api/post/post.service';
+import { Utils } from '@shared/services/utils/utils.service';
+import { postService } from '@shared/services/api/post/post.service';
 import { getPosts } from '@redux/api/posts';
 import { orderBy, uniqBy } from 'lodash';
 import useInfiniteScroll from '@shared/hooks/useInfiniteScroll';
-import { PostUtils } from '@services/utils/post-utils.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
 import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
-import { followerService } from '@services/api/followers/follower.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
 
 const Streams = () => {
   const { allPosts } = useSelector((state) => state);

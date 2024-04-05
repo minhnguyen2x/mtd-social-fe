@@ -1,5 +1,5 @@
-import { chatService } from '@services/api/chat/chat.service';
-import { socketService } from '@services/socket/socket.service';
+import { chatService } from '@shared/services/api/chat/chat.service';
+import { socketService } from '@shared/services/socket/socket.service';
 import { cloneDeep, find, findIndex, remove } from 'lodash';
 import { createSearchParams } from 'react-router-dom';
 

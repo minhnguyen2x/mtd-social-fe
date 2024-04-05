@@ -1,7 +1,7 @@
 import Avatar from '@components/avatar/Avatar';
 import SelectDropdown from '@components/select-dropdown/SelectDropdown';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
-import { privacyList } from '@services/utils/static.data';
+import { privacyList } from '@shared/services/utils/static.data';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
 import { useSelector } from 'react-redux';

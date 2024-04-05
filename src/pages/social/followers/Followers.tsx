@@ -3,14 +3,14 @@ import '@pages/social/followers/Followers.scss';
 import Avatar from '@components/avatar/Avatar';
 import CardElementButtons from '@components/card-element/CardElementButtons';
 import CardElementStats from '@components/card-element/CardElementStats';
-import { ProfileUtils } from '@services/utils/profile-utils.service';
-import { Utils } from '@services/utils/utils.service';
+import { ProfileUtils } from '@shared/services/utils/profile-utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { followerService } from '@services/api/followers/follower.service';
-import { socketService } from '@services/socket/socket.service';
-import { FollowersUtils } from '@services/utils/followers-utils.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
+import { socketService } from '@shared/services/socket/socket.service';
+import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
 
 const Followers = () => {
   const { profile, token } = useSelector((state) => state.user);

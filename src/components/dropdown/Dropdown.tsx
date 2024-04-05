@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FaCircle, FaRegCircle, FaTrashAlt, FaUserAlt } from 'react-icons/fa';
 
 import '@components/dropdown/Dropdown.scss';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const Dropdown = ({
   data,

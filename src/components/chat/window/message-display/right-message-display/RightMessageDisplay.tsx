@@ -1,9 +1,9 @@
 import Reactions from '@components/posts/reactions/Reactions';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 import PropTypes from 'prop-types';
 import doubleCheckmark from '@assets/images/double-checkmark.png';
 import RightMessageBubble from '@components/chat/window/message-display/right-message-display/RightMessageBubble';
-import { reactionsMap } from '@services/utils/static.data';
+import { reactionsMap } from '@shared/services/utils/static.data';
 
 const RightMessageDisplay = ({
   chat,

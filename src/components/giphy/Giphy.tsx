@@ -1,5 +1,5 @@
 import Input from '@components/input/Input';
-import { GiphyUtils } from '@services/utils/giphy-utils.service';
+import { GiphyUtils } from '@shared/services/utils/giphy-utils.service';
 import { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updatePostItem } from '@redux/reducers/post/post.reducer';
 import { toggleGifModal } from '@redux/reducers/modal/modal.reducer';
 import Spinner from '@components/spinner/Spinner';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const Giphy = () => {
   const { gifModalIsOpen } = useSelector((state) => state.modal);

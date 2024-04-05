@@ -1,8 +1,8 @@
 import { closeModal } from '@redux/reducers/modal/modal.reducer';
 import { clearPost, updatePostItem } from '@redux/reducers/post/post.reducer';
-import { postService } from '@services/api/post/post.service';
-import { socketService } from '@services/socket/socket.service';
-import { Utils } from '@services/utils/utils.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { socketService } from '@shared/services/socket/socket.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { cloneDeep, find, findIndex, remove } from 'lodash';
 
 export class PostUtils {

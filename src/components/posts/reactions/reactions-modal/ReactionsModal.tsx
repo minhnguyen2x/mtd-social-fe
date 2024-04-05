@@ -3,9 +3,9 @@ import ReactionList from '@components/posts/reactions/reactions-modal/reaction-l
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { closeModal } from '@redux/reducers/modal/modal.reducer';
 import { clearPost } from '@redux/reducers/post/post.reducer';
-import { postService } from '@services/api/post/post.service';
-import { reactionsColor, reactionsMap } from '@services/utils/static.data';
-import { Utils } from '@services/utils/utils.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { reactionsColor, reactionsMap } from '@shared/services/utils/static.data';
+import { Utils } from '@shared/services/utils/utils.service';
 import { filter, orderBy, some } from 'lodash';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

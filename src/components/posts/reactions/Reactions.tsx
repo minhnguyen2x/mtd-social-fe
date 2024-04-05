@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import '@components/posts/reactions/Reactions.scss';
-import { reactionsMap } from '@services/utils/static.data';
+import { reactionsMap } from '@shared/services/utils/static.data';
 
 const Reactions = ({ handleClick, showLabel = true }) => {
   const reactionList = ['like', 'love', 'wow', 'happy', 'sad', 'angry'];

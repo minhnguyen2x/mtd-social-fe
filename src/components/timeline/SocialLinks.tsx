@@ -1,7 +1,7 @@
 import BasicInfoSkeleton from '@components/timeline/BasicInfoSkeleton';
 import InfoDisplay from '@components/timeline/InfoDisplay';
-import { userService } from '@services/api/user/user.service';
-import { Utils } from '@services/utils/utils.service';
+import { userService } from '@shared/services/api/user/user.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 

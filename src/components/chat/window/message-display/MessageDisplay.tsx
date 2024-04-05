@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '@components/chat/window/message-display/MessageDisplay.scss';
-import { timeAgo } from '@services/utils/timeago.utils';
-import { Utils } from '@services/utils/utils.service';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
+import { Utils } from '@shared/services/utils/utils.service';
 import RightMessageDisplay from '@components/chat/window/message-display/right-message-display/RightMessageDisplay';
 import { useRef, useState } from 'react';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';

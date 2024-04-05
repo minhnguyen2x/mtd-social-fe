@@ -15,7 +15,7 @@ import {
 } from '@redux/reducers/modal/modal.reducer';
 import AddPost from '@components/posts/post-modal/post-add/AddPost';
 import { useRef, useState } from 'react';
-import { ImageUtils } from '@services/utils/image-utils.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import EditPost from '@components/posts/post-modal/post-edit/EditPost';
 
 const PostForm = () => {

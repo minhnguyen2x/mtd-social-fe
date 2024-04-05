@@ -4,8 +4,8 @@ import ReactionWrapper from '@components/posts/modal-wrappers/reaction-wrapper/R
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { closeModal } from '@redux/reducers/modal/modal.reducer';
 import { clearPost } from '@redux/reducers/post/post.reducer';
-import { postService } from '@services/api/post/post.service';
-import { Utils } from '@services/utils/utils.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 

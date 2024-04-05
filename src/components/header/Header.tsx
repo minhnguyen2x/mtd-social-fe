@@ -4,25 +4,25 @@ import { FaCaretDown, FaCaretUp, FaRegBell, FaRegEnvelope } from 'react-icons/fa
 
 import '@components/header/Header.scss';
 import Avatar from '@components/avatar/Avatar';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import MessageSidebar from '@components/message-sidebar/MessageSidebar';
 import { useDispatch, useSelector } from 'react-redux';
 import Dropdown from '@components/dropdown/Dropdown';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
-import { ProfileUtils } from '@services/utils/profile-utils.service';
+import { ProfileUtils } from '@shared/services/utils/profile-utils.service';
 import { createSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
 import useSessionStorage from '@shared/hooks/useSessionStorage';
-import { userService } from '@services/api/user/user.service';
+import { userService } from '@shared/services/api/user/user.service';
 import HeaderSkeleton from '@components/header/HeaderSkeleton';
-import { notificationService } from '@services/api/notifications/notification.service';
-import { NotificationUtils } from '@services/utils/notification-utils.service';
+import { notificationService } from '@shared/services/api/notifications/notification.service';
+import { NotificationUtils } from '@shared/services/utils/notification-utils.service';
 import NotificationPreview from '@components/dialog/NotificationPreview';
-import { socketService } from '@services/socket/socket.service';
+import { socketService } from '@shared/services/socket/socket.service';
 import { sumBy } from 'lodash';
-import { ChatUtils } from '@services/utils/chat-utils.service';
-import { chatService } from '@services/api/chat/chat.service';
+import { ChatUtils } from '@shared/services/utils/chat-utils.service';
+import { chatService } from '@shared/services/api/chat/chat.service';
 import { getConversationList } from '@redux/api/chat';
 
 const Header = () => {

@@ -4,9 +4,9 @@ import Post from '@components/posts/post/Post';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
 import CountContainer from '@components/timeline/CountContainer';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
-import { followerService } from '@services/api/followers/follower.service';
-import { PostUtils } from '@services/utils/post-utils.service';
-import { Utils } from '@services/utils/utils.service';
+import { followerService } from '@shared/services/api/followers/follower.service';
+import { PostUtils } from '@shared/services/utils/post-utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,7 +15,7 @@ import '@components/timeline/Timeline.scss';
 import BasicInfo from '@components/timeline/BasicInfo';
 import SocialLinks from '@components/timeline/SocialLinks';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
-import { postService } from '@services/api/post/post.service';
+import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@redux/reducers/post/user-post-reaction.reducer';
 
 const Timeline = ({ userProfileData, loading }) => {

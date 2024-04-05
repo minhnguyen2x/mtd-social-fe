@@ -1,5 +1,5 @@
 import Avatar from '@components/avatar/Avatar';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
 import '@components/gallery-image/GalleryImage.scss';

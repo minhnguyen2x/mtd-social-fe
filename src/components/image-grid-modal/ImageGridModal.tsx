@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '@components/image-grid-modal/ImageGridModal.scss';
 import ReactionWrapper from '@components/posts/modal-wrappers/reaction-wrapper/ReactionWrapper';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 
 const ImageGridModal = ({ images, closeModal, selectedImage }) => {
   return (

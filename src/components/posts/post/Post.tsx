@@ -1,14 +1,14 @@
 import Avatar from '@components/avatar/Avatar';
-import { timeAgo } from '@services/utils/timeago.utils';
+import { timeAgo } from '@shared/services/utils/timeago.utils';
 import PropTypes from 'prop-types';
 import { FaPencilAlt, FaRegTrashAlt } from 'react-icons/fa';
 import { find } from 'lodash';
-import { feelingsList, privacyList } from '@services/utils/static.data';
+import { feelingsList, privacyList } from '@shared/services/utils/static.data';
 import '@components/posts/post/Post.scss';
 import PostCommentSection from '@components/posts/post-comment-section/PostCommentSection';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactionsModal from '@components/posts/reactions/reactions-modal/ReactionsModal';
-import { Utils } from '@services/utils/utils.service';
+import { Utils } from '@shared/services/utils/utils.service';
 import useLocalStorage from '@shared/hooks/useLocalStorage';
 import CommentInputBox from '@components/posts/comments/comment-input/CommentInputBox';
 import CommentsModal from '@components/posts/comments/comments-modal/CommentsModal';
@@ -17,8 +17,8 @@ import ImageModal from '@components/image-modal/ImageModal';
 import { openModal, toggleDeleteDialog } from '@redux/reducers/modal/modal.reducer';
 import { clearPost, updatePostItem } from '@redux/reducers/post/post.reducer';
 import Dialog from '@components/dialog/Dialog';
-import { postService } from '@services/api/post/post.service';
-import { ImageUtils } from '@services/utils/image-utils.service';
+import { postService } from '@shared/services/api/post/post.service';
+import { ImageUtils } from '@shared/services/utils/image-utils.service';
 
 const Post = ({ post, showIcons }) => {
   const { _id } = useSelector((state) => state.post);
