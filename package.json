@@ -34,7 +34,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 127.0.0.1",
     "lint:check": "eslint 'src/**/*.js'",
     "lint:fix": "eslint 'src/**/*.js' --fix",
     "prettier:check": "prettier --check 'src/**/*.{js,jsx,json}'",
