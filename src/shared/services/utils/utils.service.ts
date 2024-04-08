@@ -4,6 +4,11 @@ import { APP_ENVIRONMENT } from '@shared/services/axios';
 import { avatarColors } from '@shared/services/utils/static.data';
 import { floor, random, some, findIndex } from 'lodash';
 import millify from 'millify';
+import { StoreDispatch } from 'shared/types/store';
+
+type DispatchClearNotificationParams = {
+  dispatch: StoreDispatch;
+};
 
 export class Utils {
   static avatarColor() {
@@ -48,7 +53,7 @@ export class Utils {
     dispatch(addNotification({ message, type }));
   }
 
-  static dispatchClearNotification(dispatch) {
+  static dispatchClearNotification({ dispatch }: DispatchClearNotificationParams) {
     dispatch(clearNotification());
   }
 

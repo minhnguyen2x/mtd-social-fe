@@ -1,15 +1,20 @@
-import PropTypes from 'prop-types';
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef, useState, FunctionComponent } from 'react';
 import { cloneDeep } from 'lodash';
-
-import '@components/toast/Toast.scss';
+import styles from '@shared/components/toast/toast.module.scss';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
-const Toast = (props) => {
-  const { toastList, position, autoDelete, autoDeleteTime = 2000 } = props;
+export interface ToastProps {
+  toastList: any[];
+  position: string;
+  autoDelete: boolean;
+  autoDeleteTime?: number;
+}
+
+export const Toast: FunctionComponent<ToastProps> = ({ toastList, position, autoDelete, autoDeleteTime = 2000 }) => {
   const [list, setList] = useState(toastList);
-  const listData = useRef([]);
+  const listData = useRef<any[]>([]);
+
   const dispatch = useAppDispatch();
 
   const deleteToast = useCallback(() => {
@@ -18,7 +23,7 @@ const Toast = (props) => {
     setList([...listData.current]);
     if (!listData.current.length) {
       list.length = 0;
-      Utils.dispatchClearNotification(dispatch);
+      Utils.dispatchClearNotification({ dispatch });
     }
   }, [list, dispatch]);
 
@@ -38,21 +43,29 @@ const Toast = (props) => {
   }, [toastList, autoDelete, autoDeleteTime, list, deleteToast]);
 
   return (
-    <div className={`toast-notification-container ${position}`}>
+    <div className={`${styles['toast-notification-container']} ${position}`}>
       {list.map((toast) => (
         <div
           data-testid="toast-notification"
           key={Utils.generateString(10)}
-          className={`toast-notification toast ${position}`}
+          className={`${styles['toast-notification']} ${styles['toast']} ${position}`}
           style={{ backgroundColor: toast.backgroundColor }}
         >
-          <button className="cancel-button" onClick={() => deleteToast()}>
+          <button className={styles['cancel-button']} onClick={() => deleteToast()}>
             X
           </button>
-          <div className={`toast-notification-image ${toast.description.length <= 73 ? 'toast-icon' : ''}`}>
+          <div
+            className={`${styles['toast-notification-image']} ${
+              toast.description.length <= 73 ? styles['toast-icon'] : ''
+            }`}
+          >
             <img src={toast.icon} alt="" />
           </div>
-          <div className={`toast-notification-message ${toast.description.length <= 73 ? 'toast-message' : ''}`}>
+          <div
+            className={`${styles['toast-notification-message']} ${
+              toast.description.length <= 73 ? styles['toast-message'] : ''
+            }`}
+          >
             {toast.description}
           </div>
         </div>
@@ -60,12 +73,3 @@ const Toast = (props) => {
     </div>
   );
 };
-
-Toast.propTypes = {
-  toastList: PropTypes.array,
-  position: PropTypes.string,
-  autoDelete: PropTypes.bool,
-  autoDeleteTime: PropTypes.number
-};
-
-export default Toast;

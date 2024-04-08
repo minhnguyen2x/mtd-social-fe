@@ -1,7 +1,7 @@
 import { AppRouter } from '@root/routes';
 import { BrowserRouter } from 'react-router-dom';
 import '@shared/styles/app.scss';
-import Toast from '@components/toast/Toast';
+import { Toast } from '@shared/components/toast/toast';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 
 export const App = () => {
