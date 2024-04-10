@@ -1,8 +1,8 @@
 import '@pages/auth/reset-password/ResetPassword.scss';
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import Input from '@components/input/Input';
-import Button from '@components/button/Button';
+import { Input } from '@shared/components/input/input';
+import { Button } from '@shared/components/button/button';
 import { Link, useSearchParams } from 'react-router-dom';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { authService } from '@shared/services/api/auth/auth.service';

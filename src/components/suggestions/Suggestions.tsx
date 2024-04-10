@@ -1,5 +1,5 @@
 import Avatar from '@components/avatar/Avatar';
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import { useEffect, useState } from 'react';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';

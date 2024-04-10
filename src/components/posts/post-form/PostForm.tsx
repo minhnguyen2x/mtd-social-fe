@@ -1,5 +1,5 @@
 import Avatar from '@components/avatar/Avatar';
-import Input from '@components/input/Input';
+import { Input } from '@shared/components/input/input';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import photo from '@shared/assets/images/photo.png';

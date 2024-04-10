@@ -13,7 +13,7 @@ import { getPosts } from '@shared/redux-toolkit/api/posts';
 import { orderBy, uniqBy } from 'lodash';
 import useInfiniteScroll from '@shared/hooks/useInfiniteScroll';
 import { PostUtils } from '@shared/services/utils/post-utils.service';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 import { followerService } from '@shared/services/api/followers/follower.service';
 

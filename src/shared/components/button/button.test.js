@@ -1,4 +1,4 @@
-import Button from '@components/button/Button';
+import { Button } from '@components/button/Button';
 import { render, screen } from '@root/test.utils';
 import userEvent from '@testing-library/user-event';
 

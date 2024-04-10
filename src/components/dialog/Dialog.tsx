@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import '@components/dialog/Dialog.scss';
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 
 const Dialog = ({ title, firstButtonText, secondButtonText, firstBtnHandler, secondBtnHandler }) => {
   return (

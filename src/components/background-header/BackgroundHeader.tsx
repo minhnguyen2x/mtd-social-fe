@@ -1,7 +1,7 @@
 import Avatar from '@components/avatar/Avatar';
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import ImageGridModal from '@components/image-grid-modal/ImageGridModal';
-import Input from '@components/input/Input';
+import { Input } from '@shared/components/input/input';
 import Spinner from '@components/spinner/Spinner';
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';

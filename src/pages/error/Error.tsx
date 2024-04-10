@@ -1,4 +1,4 @@
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import { useNavigate } from 'react-router-dom';
 
 import '@pages/error/Error.scss';

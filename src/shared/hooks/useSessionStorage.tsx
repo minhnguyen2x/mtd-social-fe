@@ -1,4 +1,4 @@
-const useSessionStorage = (key, type) => {
+export const useSessionStorage = (key, type) => {
   try {
     if (type === 'get') {
       const item = window.sessionStorage.getItem(key);
@@ -18,4 +18,3 @@ const useSessionStorage = (key, type) => {
     console.log(error);
   }
 };
-export default useSessionStorage;

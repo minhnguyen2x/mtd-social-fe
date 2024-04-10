@@ -1,4 +1,4 @@
-import Input from '@components/input/Input';
+import { Input } from '@shared/components/input/input';
 import PropTypes from 'prop-types';
 import '@components/posts/comments/comment-input/CommentInputBox.scss';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';

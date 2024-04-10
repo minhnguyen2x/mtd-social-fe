@@ -1,8 +1,8 @@
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import '@components/change-password/ChangePassword.scss';
-import Input from '@components/input/Input';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
-import useSessionStorage from '@shared/hooks/useSessionStorage';
+import { Input } from '@shared/components/input/input';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
+import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';

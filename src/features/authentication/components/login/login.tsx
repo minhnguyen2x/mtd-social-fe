@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import Input from '@components/input/Input';
-import Button from '@components/button/Button';
+import { Input } from '@shared/components/input/input';
+import { Button } from '@shared/components/button/button';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
-import '@pages/auth/login/Login.scss';
+import '@features/authentication/components/login/login.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { Utils } from '@shared/services/utils/utils.service';
-import useSessionStorage from '@shared/hooks/useSessionStorage';
+import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 
-const Login = () => {
+export const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
@@ -106,5 +106,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;

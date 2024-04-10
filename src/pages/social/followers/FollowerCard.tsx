@@ -1,5 +1,5 @@
 import Avatar from '@components/avatar/Avatar';
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import '@pages/social/followers/Followers.scss';
 import { FaUserPlus } from 'react-icons/fa';
 import PropTypes from 'prop-types';

@@ -1,4 +1,4 @@
-import useLocalStorage from '@hooks/useLocalStorage';
+import { useLocalStorage } from '@hooks/useLocalStorage';
 import { renderHook } from '@root/test.utils';
 
 describe('useLocalStorage', () => {

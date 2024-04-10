@@ -1,4 +1,4 @@
-import Input from '@components/input/Input';
+import { Input } from '@shared/components/input/input';
 import Spinner from '@components/spinner/Spinner';
 import { GiphyUtils } from '@shared/services/utils/giphy-utils.service';
 import { Utils } from '@shared/services/utils/utils.service';

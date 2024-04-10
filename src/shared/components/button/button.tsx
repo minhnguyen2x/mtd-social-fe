@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Button = (props) => {
+export const Button = (props) => {
   const { label, className, disabled, handleClick } = props;
 
   return (
@@ -18,5 +18,3 @@ Button.propTypes = {
   handleClick: PropTypes.func,
   disabled: PropTypes.bool
 };
-
-export default Button;

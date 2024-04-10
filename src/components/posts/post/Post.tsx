@@ -10,7 +10,7 @@ import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import ReactionsModal from '@components/posts/reactions/reactions-modal/ReactionsModal';
 import { Utils } from '@shared/services/utils/utils.service';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import CommentInputBox from '@components/posts/comments/comment-input/CommentInputBox';
 import CommentsModal from '@components/posts/comments/comments-modal/CommentsModal';
 import { useState, useEffect } from 'react';

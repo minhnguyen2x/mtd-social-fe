@@ -1,12 +1,12 @@
-import Input from '@components/input/Input';
-import Button from '@components/button/Button';
+import { Input } from '@shared/components/input/input';
+import { Button } from '@shared/components/button/button';
 import '@pages/auth/register/Register.scss';
 import { useState, useEffect } from 'react';
 import { Utils } from '@shared/services/utils/utils.service';
 import { authService } from '@shared/services/api/auth/auth.service';
 import { useNavigate } from 'react-router-dom';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
-import useSessionStorage from '@shared/hooks/useSessionStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
+import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
 const Register = () => {

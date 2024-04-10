@@ -1,4 +1,4 @@
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import '@components/notification-settings/NotificationSettings.scss';
 import Toggle from '@components/toggle/Toggle';
 import { updateUserProfile } from '@shared/redux-toolkit/reducers/user/user.reducer';

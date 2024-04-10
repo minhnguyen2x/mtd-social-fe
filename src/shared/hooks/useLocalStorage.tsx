@@ -1,4 +1,4 @@
-const useLocalStorage = (key, type) => {
+export const useLocalStorage = (key, type) => {
   try {
     if (type === 'get') {
       const item = window.localStorage.getItem(key);
@@ -18,4 +18,3 @@ const useLocalStorage = (key, type) => {
     console.log(error);
   }
 };
-export default useLocalStorage;

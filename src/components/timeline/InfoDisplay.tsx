@@ -1,4 +1,4 @@
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import BasicInfoSkeleton from '@components/timeline/BasicInfoSkeleton';
 import PropTypes from 'prop-types';
 import { useState } from 'react';

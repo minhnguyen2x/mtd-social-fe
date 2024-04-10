@@ -1,4 +1,4 @@
-import Button from '@components/button/Button';
+import { Button } from '@shared/components/button/button';
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 const CardElementButtons = ({

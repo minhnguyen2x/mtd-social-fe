@@ -15,7 +15,7 @@ import { useParams } from 'react-router-dom';
 import '@components/timeline/Timeline.scss';
 import BasicInfo from '@components/timeline/BasicInfo';
 import SocialLinks from '@components/timeline/SocialLinks';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 

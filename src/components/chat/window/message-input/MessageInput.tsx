@@ -1,5 +1,5 @@
-import Button from '@components/button/Button';
-import Input from '@components/input/Input';
+import { Button } from '@shared/components/button/button';
+import { Input } from '@shared/components/input/input';
 import PropTypes from 'prop-types';
 import { FaPaperPlane } from 'react-icons/fa';
 import gif from '@shared/assets/images/gif.png';

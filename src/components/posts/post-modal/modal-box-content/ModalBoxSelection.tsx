@@ -2,7 +2,7 @@ import photo from '@shared/assets/images/photo.png';
 import gif from '@shared/assets/images/gif.png';
 import feeling from '@shared/assets/images/feeling.png';
 import video from '@shared/assets/images/video.png';
-import Input from '@components/input/Input';
+import { Input } from '@shared/components/input/input';
 import useDetectOutsideClick from '@shared/hooks/useDetectOutsideClick';
 import { useRef } from 'react';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';

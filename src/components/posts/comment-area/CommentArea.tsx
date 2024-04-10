@@ -11,7 +11,7 @@ import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { postService } from '@shared/services/api/post/post.service';
 import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
 import { socketService } from '@shared/services/socket/socket.service';
-import useLocalStorage from '@shared/hooks/useLocalStorage';
+import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { clearPost, updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
 
 const CommentArea = ({ post }) => {
