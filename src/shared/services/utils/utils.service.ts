@@ -58,12 +58,15 @@ export class Utils {
   }
 
   static appEnvironment() {
-    if (APP_ENVIRONMENT === 'local') {
-      return 'LOCAL';
-    } else if (APP_ENVIRONMENT === 'development') {
-      return 'DEV';
-    } else if (APP_ENVIRONMENT === 'staging') {
-      return 'STG';
+    switch (APP_ENVIRONMENT) {
+      case 'local':
+        return 'LOCAL';
+      case 'development':
+        return 'DEV';
+      case 'staging':
+        return 'STG';
+      default:
+        return 'LOCAL';
     }
   }
 

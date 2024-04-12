@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import '@pages/auth/auth-tabs/AuthTabs.scss';
+import '@pages/auth/auth-tabs/auth-tabs.scss';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { Login } from '@features/authentication/components/login/login';
-import Register from '@pages/auth/register/Register';
+import { Register } from '@features/authentication/components/register/register';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
 import { Utils } from '@shared/services/utils/utils.service';
 import PageLoader from '@components/page-loader/PageLoader';
 
-const AuthTabs = () => {
+export const AuthTabs = () => {
   const [type, setType] = useState('Sign In');
   const keepLoggedIn = useLocalStorage('keepLoggedIn', 'get');
   const [environment, setEnvironment] = useState('');
@@ -56,5 +56,3 @@ const AuthTabs = () => {
     </>
   );
 };
-
-export default AuthTabs;

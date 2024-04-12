@@ -1,7 +1,7 @@
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
-import '@pages/auth/register/Register.scss';
-import { useState, useEffect } from 'react';
+import '@features/authentication/components/register/register.scss';
+import { useState, useEffect, FunctionComponent } from 'react';
 import { Utils } from '@shared/services/utils/utils.service';
 import { authService } from '@shared/services/api/auth/auth.service';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 
-const Register = () => {
+export const Register: FunctionComponent = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +24,7 @@ const Register = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const registerUser = async (event) => {
+  const registerUser = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     try {
@@ -45,7 +45,7 @@ const Register = () => {
       setLoading(false);
       setHasError(true);
       setAlertType('alert-error');
-      setErrorMessage(error?.response?.data?.message);
+      setErrorMessage((error as any)?.response?.data?.message);
     }
   };
 
@@ -103,5 +103,3 @@ const Register = () => {
     </div>
   );
 };
-
-export default Register;

@@ -1,4 +1,5 @@
-import { AuthTabs, ForgotPassword, ResetPassword } from '@pages/auth';
+import { ForgotPassword, ResetPassword } from '@pages/auth';
+import { AuthTabs } from '@pages/auth/auth-tabs/auth-tabs';
 import Error from '@pages/error/Error';
 import ProtectedRoute from '@pages/ProtectedRoute';
 import { useRoutes } from 'react-router-dom';
