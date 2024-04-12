@@ -1,4 +1,5 @@
-import { ForgotPassword, ResetPassword } from '@pages/(auth)';
+import { ResetPassword } from '@pages/(auth)';
+import { ForgotPassword } from '@pages/(auth)/forgot-password/forgot-password';
 import { AuthTabs } from '@pages/(auth)/auth-tabs/auth-tabs';
 import Error from '@pages/error/Error';
 import { ProtectedRoute } from '@shared/components/routes/protected-route';

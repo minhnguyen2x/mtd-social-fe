@@ -1,20 +1,20 @@
 import { FaArrowLeft } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, FunctionComponent } from 'react';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
 import { Link } from 'react-router-dom';
 import backgroundImage from '@shared/assets/images/background.jpg';
-import '@pages/(auth)/forgot-password/ForgotPassword.scss';
+import '@pages/(auth)/forgot-password/forgot-password.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
 
-const ForgotPassword = () => {
+export const ForgotPassword: FunctionComponent = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
 
-  const forgotPassword = async (event) => {
+  const forgotPassword = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     try {
@@ -24,7 +24,7 @@ const ForgotPassword = () => {
       setShowAlert(false);
       setAlertType('alert-success');
       setResponseMessage(response?.data?.message);
-    } catch (error) {
+    } catch (error: any) {
       setAlertType('alert-error');
       setLoading(false);
       setShowAlert(true);
@@ -84,5 +84,3 @@ const ForgotPassword = () => {
     </div>
   );
 };
-
-export default ForgotPassword;
