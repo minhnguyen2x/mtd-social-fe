@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FunctionComponent } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
@@ -10,7 +10,7 @@ import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 
-export const Login = () => {
+export const Login: FunctionComponent = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
@@ -25,7 +25,7 @@ export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const loginUser = async (event) => {
+  const loginUser = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     try {
@@ -42,7 +42,7 @@ export const Login = () => {
       setLoading(false);
       setHasError(true);
       setAlertType('alert-error');
-      setErrorMessage(error?.response?.data.message);
+      setErrorMessage((error as any)?.response?.data.message);
     }
   };
 
@@ -68,7 +68,7 @@ export const Login = () => {
             labelText="Username"
             placeholder="Enter Username"
             style={{ border: `${hasError ? '1px solid #fa9b8a' : ''}` }}
-            handleChange={(event) => setUsername(event.target.value)}
+            handleChange={(event: React.ChangeEvent<HTMLInputElement>) => setUsername(event.target.value)}
           />
           <Input
             id="password"
@@ -78,7 +78,7 @@ export const Login = () => {
             labelText="Password"
             placeholder="Enter Password"
             style={{ border: `${hasError ? '1px solid #fa9b8a' : ''}` }}
-            handleChange={(event) => setPassword(event.target.value)}
+            handleChange={(event: React.ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
           />
           <label className="checkmark-container" htmlFor="checkbox">
             <Input

@@ -1,8 +1,22 @@
-import PropTypes from 'prop-types';
 import '@shared/components/input/input.scss';
 import { forwardRef } from 'react';
 
-export const Input = forwardRef((props, ref) => (
+type InputProps = {
+  name: string;
+  type: string;
+  id?: string;
+  labelText?: string;
+  value?: any;
+  className?: string;
+  placeholder?: string;
+  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  style?: React.CSSProperties;
+};
+
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => (
   <div className="form-row">
     {props.labelText && (
       <label htmlFor={props.name} className="form-label">
@@ -26,18 +40,3 @@ export const Input = forwardRef((props, ref) => (
     />
   </div>
 ));
-
-Input.propTypes = {
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  labelText: PropTypes.string,
-  value: PropTypes.any,
-  className: PropTypes.string,
-  placeholder: PropTypes.string,
-  handleChange: PropTypes.func,
-  onClick: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  style: PropTypes.object
-};
