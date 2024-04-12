@@ -11,6 +11,7 @@ import PhotoSkeleton from '@pages/social/photos/PhotoSkeleton';
 import ProfileSkeleton from '@pages/social/profile/ProfileSkeleton';
 import ChatSkeleton from '@pages/social/chat/ChatSkeleton';
 import VideoSkeleton from '@pages/social/videos/VideoSkeleton';
+import { AppRoute } from '@shared/constants/app-routes';
 
 const Social = lazy(() => import('@pages/social/Social'));
 const Chat = lazy(() => import('@pages/social/chat/Chat'));
@@ -26,19 +27,19 @@ const Streams = lazy(() => import('@pages/social/streams/Streams'));
 export const AppRouter = () => {
   const elements = useRoutes([
     {
-      path: '/',
+      path: AppRoute.AuthTabs,
       element: <AuthTabs />
     },
     {
-      path: '/forgot-password',
+      path: AppRoute.ForgotPassword,
       element: <ForgotPassword />
     },
     {
-      path: '/reset-password',
+      path: AppRoute.ResetPassword,
       element: <ResetPassword />
     },
     {
-      path: '/app/social',
+      path: AppRoute.Social,
       element: (
         <ProtectedRoute>
           <Social />
@@ -46,7 +47,7 @@ export const AppRouter = () => {
       ),
       children: [
         {
-          path: 'streams',
+          path: AppRoute.Streams,
           element: (
             <Suspense fallback={<StreamsSkeleton />}>
               <Streams />
@@ -54,7 +55,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'chat/messages',
+          path: AppRoute.Chat,
           element: (
             <Suspense fallback={<ChatSkeleton />}>
               <Chat />
@@ -62,7 +63,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'people',
+          path: AppRoute.People,
           element: (
             <Suspense fallback={<CardSkeleton />}>
               <People />
@@ -70,7 +71,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'followers',
+          path: AppRoute.Followers,
           element: (
             <Suspense fallback={<CardSkeleton />}>
               <Followers />
@@ -78,7 +79,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'following',
+          path: AppRoute.Following,
           element: (
             <Suspense fallback={<CardSkeleton />}>
               <Following />
@@ -86,7 +87,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'photos',
+          path: AppRoute.Photos,
           element: (
             <Suspense fallback={<PhotoSkeleton />}>
               <Photos />
@@ -94,7 +95,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'videos',
+          path: AppRoute.Videos,
           element: (
             <Suspense fallback={<VideoSkeleton />}>
               <Videos />
@@ -102,7 +103,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'notifications',
+          path: AppRoute.Notification,
           element: (
             <Suspense fallback={<NotificationSkeleton />}>
               <Notification />
@@ -110,7 +111,7 @@ export const AppRouter = () => {
           )
         },
         {
-          path: 'profile/:username',
+          path: AppRoute.Profile,
           element: (
             <Suspense fallback={<ProfileSkeleton />}>
               <Profile />
@@ -120,7 +121,7 @@ export const AppRouter = () => {
       ]
     },
     {
-      path: '*',
+      path: AppRoute.Others,
       element: <Error />
     }
   ]);
