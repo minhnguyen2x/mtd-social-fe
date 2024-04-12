@@ -1,4 +1,4 @@
-import '@pages/auth/reset-password/ResetPassword.scss';
+import '@pages/(auth)/reset-password/ResetPassword.scss';
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Input } from '@shared/components/input/input';

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '@pages/auth/auth-tabs/auth-tabs.scss';
+import '@pages/(auth)/auth-tabs/auth-tabs.scss';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { Login } from '@features/authentication/components/login/login';
 import { Register } from '@features/authentication/components/register/register';

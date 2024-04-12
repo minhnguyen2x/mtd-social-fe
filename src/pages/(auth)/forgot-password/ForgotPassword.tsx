@@ -4,7 +4,7 @@ import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
 import { Link } from 'react-router-dom';
 import backgroundImage from '@shared/assets/images/background.jpg';
-import '@pages/auth/forgot-password/ForgotPassword.scss';
+import '@pages/(auth)/forgot-password/ForgotPassword.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
 
 const ForgotPassword = () => {
