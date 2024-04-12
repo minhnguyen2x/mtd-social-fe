@@ -1,5 +1,5 @@
-import '@pages/(auth)/reset-password/ResetPassword.scss';
-import { useState } from 'react';
+import '@pages/(auth)/reset-password/reset-password.scss';
+import { useState, FunctionComponent } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
@@ -7,7 +7,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { authService } from '@shared/services/api/auth/auth.service';
 
-const ResetPassword = () => {
+export const ResetPassword: FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ const ResetPassword = () => {
   const [responseMessage, setResponseMessage] = useState('');
   const [searchParams] = useSearchParams();
 
-  const resetPassword = async (event) => {
+  const resetPassword = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     try {
@@ -28,7 +28,7 @@ const ResetPassword = () => {
       setShowAlert(false);
       setAlertType('alert-success');
       setResponseMessage(response?.data?.message);
-    } catch (error) {
+    } catch (error: any) {
       setAlertType('alert-error');
       setLoading(false);
       setShowAlert(true);
@@ -97,5 +97,3 @@ const ResetPassword = () => {
     </div>
   );
 };
-
-export default ResetPassword;

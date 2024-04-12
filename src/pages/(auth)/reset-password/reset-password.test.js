@@ -1,6 +1,6 @@
 import { resetPasswordMockError } from '@mocks/handlers/auth';
 import { server } from '@mocks/server';
-import ResetPassword from '@pages/auth/reset-password/ResetPassword';
+import { ResetPassword } from '@pages/(auth)/reset-password/reset-password';
 import { render, screen, waitFor } from '@root/test.utils';
 import userEvent from '@testing-library/user-event';
 import { createBrowserHistory } from 'history';
