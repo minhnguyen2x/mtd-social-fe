@@ -4,14 +4,16 @@ import { useSessionStorage } from '@shared/hooks/useSessionStorage';
 import { addUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
 import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
-import { useCallback, useState } from 'react';
+import React, { FunctionComponent, useCallback, useState } from 'react';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { Navigate, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { getConversationList } from '@shared/redux-toolkit/api/chat';
+import { AppRoute } from '@shared/constants/app-routes';
 
-const ProtectedRoute = ({ children }) => {
+type ProtectedRouteProps = { children: React.ReactNode };
+
+export const ProtectedRoute: FunctionComponent<ProtectedRouteProps> = ({ children }) => {
   const { profile, token } = useAppSelector((state) => state.user);
   const [userData, setUserData] = useState(null);
   const [tokenIsValid, setTokenIsValid] = useState(false);
@@ -35,7 +37,7 @@ const ProtectedRoute = ({ children }) => {
       setTimeout(async () => {
         Utils.clearStore({ dispatch, deleteStorageUsername, deleteSessionPageReload, setLoggedIn });
         await userService.logoutUser();
-        navigate('/');
+        navigate(AppRoute.AuthTabs);
       }, 1000);
     }
   }, [dispatch, navigate, deleteStorageUsername, deleteSessionPageReload, setLoggedIn]);
@@ -46,16 +48,11 @@ const ProtectedRoute = ({ children }) => {
 
   if (keepLoggedIn || (!keepLoggedIn && userData) || (profile && token) || pageReload) {
     if (!tokenIsValid) {
-      return <></>;
+      return <React.Fragment></React.Fragment>;
     } else {
-      return <>{children}</>;
+      return <React.Fragment>{children}</React.Fragment>;
     }
   } else {
-    return <>{<Navigate to="/" />}</>;
+    return <React.Fragment>{<Navigate to={AppRoute.AuthTabs} />}</React.Fragment>;
   }
 };
-ProtectedRoute.propTypes = {
-  children: PropTypes.node.isRequired
-};
-
-export default ProtectedRoute;

@@ -1,7 +1,7 @@
 import { ForgotPassword, ResetPassword } from '@pages/(auth)';
 import { AuthTabs } from '@pages/(auth)/auth-tabs/auth-tabs';
 import Error from '@pages/error/Error';
-import ProtectedRoute from '@pages/ProtectedRoute';
+import { ProtectedRoute } from '@shared/components/routes/protected-route';
 import { useRoutes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import StreamsSkeleton from '@pages/social/streams/StreamsSkeleton';
