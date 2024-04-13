@@ -1,4 +1,4 @@
-import { BASE_ENDPOINT } from '@shared/services/axios';
+import { BASE_ENDPOINT } from '@shared/libs/axios/mtd-social-api';
 import { io, Socket } from 'socket.io-client';
 
 class SocketService {

@@ -1,10 +1,12 @@
 import { addNotification, clearNotification } from '@shared/redux-toolkit/reducers/notifications/notification.reducer';
 import { addUser, clearUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
-import { APP_ENVIRONMENT } from '@shared/services/axios';
 import { avatarColors } from '@shared/services/utils/static.data';
 import { floor, random, some, findIndex } from 'lodash';
 import millify from 'millify';
 import { StoreDispatch } from 'shared/types/store';
+
+const APP_ENVIRONMENT = import.meta.env.VITE_APP_ENVIRONMENT as 'local' | 'development' | 'staging' | 'production';
+if (!APP_ENVIRONMENT) throw new Error('APP_ENVIRONMENT is not set');
 
 type DispatchClearNotificationParams = {
   dispatch: StoreDispatch;
