@@ -17,7 +17,7 @@ import BasicInfo from '@components/timeline/BasicInfo';
 import SocialLinks from '@components/timeline/SocialLinks';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { postService } from '@shared/services/api/post/post.service';
-import { addReactions } from '@shared/redux-toolkit/reducers/post/user-post-reaction.reducer';
+import { addReactions } from '@shared/libs/redux-toolkit/reducers/post/user-post-reaction.reducer';
 
 const Timeline = ({ userProfileData, loading }) => {
   const { profile } = useAppSelector((state) => state.user);

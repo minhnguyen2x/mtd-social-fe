@@ -6,8 +6,8 @@ import { FaSearch } from 'react-icons/fa';
 import '@components/giphy/Giphy.scss';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
-import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
-import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { updatePostItem } from '@shared/libs/redux-toolkit/reducers/post/post.reducer';
+import { toggleGifModal } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
 import Spinner from '@components/spinner/Spinner';
 import { Utils } from '@shared/services/utils/utils.service';
 

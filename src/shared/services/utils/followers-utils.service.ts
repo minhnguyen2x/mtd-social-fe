@@ -1,4 +1,4 @@
-import { addUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
+import { addUser } from '@shared/libs/redux-toolkit/reducers/user/user.reducer';
 import { followerService } from '@shared/services/api/followers/follower.service';
 import { socketService } from '@shared/services/socket/socket.service';
 import { Utils } from '@shared/services/utils/utils.service';

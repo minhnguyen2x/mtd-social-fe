@@ -10,7 +10,7 @@ import { useAppSelector } from '@shared/hooks/use-app-selector';
 import Feelings from '@components/feelings/Feelings';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';
 import PropTypes from 'prop-types';
-import { toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { toggleGifModal } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
 
 const ModalBoxSelection = ({ setSelectedPostImage, setSelectedVideo }) => {
   const { feelingsIsOpen, gifModalIsOpen } = useAppSelector((state) => state.modal);

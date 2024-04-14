@@ -1,4 +1,4 @@
-import { store } from '@shared/redux-toolkit/store';
+import { store } from '@shared/libs/redux-toolkit/store';
 
 export type StoreState = ReturnType<typeof store.getState>;
 

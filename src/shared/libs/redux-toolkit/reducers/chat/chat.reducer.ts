@@ -1,4 +1,4 @@
-import { getConversationList } from '@shared/redux-toolkit/api/chat';
+import { getConversationList } from '@shared/libs/redux-toolkit/api/chat';
 import { createSlice } from '@reduxjs/toolkit';
 import { orderBy } from 'lodash';
 

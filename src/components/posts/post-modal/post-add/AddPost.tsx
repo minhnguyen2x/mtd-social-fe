@@ -9,7 +9,7 @@ import { bgColors } from '@shared/services/utils/static.data';
 import ModalBoxSelection from '@components/posts/post-modal/modal-box-content/ModalBoxSelection';
 import { Button } from '@shared/components/button/button';
 import { PostUtils } from '@shared/services/utils/post-utils.service';
-import { closeModal, toggleGifModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { closeModal, toggleGifModal } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
 import Giphy from '@components/giphy/Giphy';
 import PropTypes from 'prop-types';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';

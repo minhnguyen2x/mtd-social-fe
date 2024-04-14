@@ -1,4 +1,4 @@
-import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
+import { updatePostItem } from '@shared/libs/redux-toolkit/reducers/post/post.reducer';
 
 export class ImageUtils {
   static validateFile(file, type) {

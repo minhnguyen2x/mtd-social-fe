@@ -1,14 +1,14 @@
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { useSessionStorage } from '@shared/hooks/useSessionStorage';
-import { addUser } from '@shared/redux-toolkit/reducers/user/user.reducer';
+import { addUser } from '@shared/libs/redux-toolkit/reducers/user/user.reducer';
 import { userService } from '@shared/services/api/user/user.service';
 import { Utils } from '@shared/services/utils/utils.service';
 import React, { FunctionComponent, useCallback, useState } from 'react';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { getConversationList } from '@shared/redux-toolkit/api/chat';
+import { getConversationList } from '@shared/libs/redux-toolkit/api/chat';
 import { AppRoute } from '@shared/constants/app-routes';
 
 type ProtectedRouteProps = { children: React.ReactNode };

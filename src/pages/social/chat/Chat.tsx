@@ -2,7 +2,7 @@ import ChatList from '@components/chat/list/ChatList';
 import ChatWindow from '@components/chat/window/ChatWindow';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import '@pages/social/chat/Chat.scss';
-import { getConversationList } from '@shared/redux-toolkit/api/chat';
+import { getConversationList } from '@shared/libs/redux-toolkit/api/chat';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 

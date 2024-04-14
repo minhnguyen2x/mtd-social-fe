@@ -15,8 +15,8 @@ import CommentInputBox from '@components/posts/comments/comment-input/CommentInp
 import CommentsModal from '@components/posts/comments/comments-modal/CommentsModal';
 import { useState, useEffect } from 'react';
 import ImageModal from '@components/image-modal/ImageModal';
-import { openModal, toggleDeleteDialog } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
-import { clearPost, updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
+import { openModal, toggleDeleteDialog } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
+import { clearPost, updatePostItem } from '@shared/libs/redux-toolkit/reducers/post/post.reducer';
 import Dialog from '@components/dialog/Dialog';
 import { postService } from '@shared/services/api/post/post.service';
 import { ImageUtils } from '@shared/services/utils/image-utils.service';

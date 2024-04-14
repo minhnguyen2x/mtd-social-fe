@@ -5,7 +5,7 @@ import NotificationSettings from '@components/notification-settings/Notification
 import Timeline from '@components/timeline/Timeline';
 import FollowerCard from '@pages/social/followers/FollowerCard';
 import '@pages/social/profile/Profile.scss';
-import { toggleDeleteDialog } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { toggleDeleteDialog } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
 import { imageService } from '@shared/services/api/image/image.service';
 import { userService } from '@shared/services/api/user/user.service';
 import { tabItems } from '@shared/services/utils/static.data';

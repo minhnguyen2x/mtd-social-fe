@@ -24,7 +24,7 @@ import { socketService } from '@shared/services/socket/socket.service';
 import { sumBy } from 'lodash';
 import { ChatUtils } from '@shared/services/utils/chat-utils.service';
 import { chatService } from '@shared/services/api/chat/chat.service';
-import { getConversationList } from '@shared/redux-toolkit/api/chat';
+import { getConversationList } from '@shared/libs/redux-toolkit/api/chat';
 
 const Header = () => {
   const { profile } = useAppSelector((state) => state.user);

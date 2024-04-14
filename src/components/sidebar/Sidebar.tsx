@@ -4,7 +4,7 @@ import { useLocation, createSearchParams, useNavigate } from 'react-router-dom';
 import '@components//sidebar/Sidebar.scss';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
-import { getPosts } from '@shared/redux-toolkit/api/posts';
+import { getPosts } from '@shared/libs/redux-toolkit/api/posts';
 import { Utils } from '@shared/services/utils/utils.service';
 import { ChatUtils } from '@shared/services/utils/chat-utils.service';
 import { chatService } from '@shared/services/api/chat/chat.service';

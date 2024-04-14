@@ -7,8 +7,8 @@ import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useEffect, useState } from 'react';
 import { postService } from '@shared/services/api/post/post.service';
 import { reactionsMap } from '@shared/services/utils/static.data';
-import { updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
-import { toggleCommentsModal, toggleReactionsModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
+import { updatePostItem } from '@shared/libs/redux-toolkit/reducers/post/post.reducer';
+import { toggleCommentsModal, toggleReactionsModal } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
 
 const ReactionsAndCommentsDisplay = ({ post }) => {
   const { reactionsModalIsOpen, commentsModalIsOpen } = useAppSelector((state) => state.modal);

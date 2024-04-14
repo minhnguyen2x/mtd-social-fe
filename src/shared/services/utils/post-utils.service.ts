@@ -1,5 +1,5 @@
-import { closeModal } from '@shared/redux-toolkit/reducers/modal/modal.reducer';
-import { clearPost, updatePostItem } from '@shared/redux-toolkit/reducers/post/post.reducer';
+import { closeModal } from '@shared/libs/redux-toolkit/reducers/modal/modal.reducer';
+import { clearPost, updatePostItem } from '@shared/libs/redux-toolkit/reducers/post/post.reducer';
 import { postService } from '@shared/services/api/post/post.service';
 import { socketService } from '@shared/services/socket/socket.service';
 import { Utils } from '@shared/services/utils/utils.service';

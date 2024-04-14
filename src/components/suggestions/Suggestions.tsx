@@ -8,7 +8,7 @@ import '@components/suggestions/Suggestions.scss';
 import { Utils } from '@shared/services/utils/utils.service';
 import { FollowersUtils } from '@shared/services/utils/followers-utils.service';
 import { filter } from 'lodash';
-import { addToSuggestions } from '@shared/redux-toolkit/reducers/suggestions/suggestions.reducer';
+import { addToSuggestions } from '@shared/libs/redux-toolkit/reducers/suggestions/suggestions.reducer';
 
 const Suggestions = () => {
   const { suggestions } = useAppSelector((state) => state);

@@ -12,7 +12,7 @@ import useDebounce from '@shared/hooks/useDebounce';
 import { ChatUtils } from '@shared/services/utils/chat-utils.service';
 import { cloneDeep, find, findIndex } from 'lodash';
 import { createSearchParams, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
-import { setSelectedChatUser } from '@shared/redux-toolkit/reducers/chat/chat.reducer';
+import { setSelectedChatUser } from '@shared/libs/redux-toolkit/reducers/chat/chat.reducer';
 import { chatService } from '@shared/services/api/chat/chat.service';
 import { timeAgo } from '@shared/services/utils/timeago.utils';
 import ChatListBody from '@components/chat/list/ChatListBody';
