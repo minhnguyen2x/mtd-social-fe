@@ -1,11 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import '@pages/(social)/Social.scss';
+import '@shared/layouts/social/social.scss';
 import Header from '@components/header/Header';
 import Sidebar from '@components/sidebar/Sidebar';
+import React from 'react';
 
-const Social = () => {
+export const SocialLayout = () => {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <div className="dashboard">
         <div className="dashboard-sidebar">
@@ -15,7 +16,6 @@ const Social = () => {
           <Outlet />
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-export default Social;

@@ -14,7 +14,9 @@ import ChatSkeleton from '@pages/(social)/chat/ChatSkeleton';
 import VideoSkeleton from '@pages/(social)/videos/VideoSkeleton';
 import { AppRoute } from '@shared/constants/app-routes';
 
-const Social = lazy(() => import('@pages/(social)/Social'));
+const SocialLayout = lazy(() =>
+  import('@shared/layouts/social/social').then((module) => ({ default: module.SocialLayout }))
+);
 const Chat = lazy(() => import('@pages/(social)/chat/Chat'));
 const Followers = lazy(() => import('@pages/(social)/followers/Followers'));
 const Following = lazy(() => import('@pages/(social)/following/Following'));
@@ -43,7 +45,7 @@ export const AppRouter = () => {
       path: AppRoute.Social,
       element: (
         <ProtectedRoute>
-          <Social />
+          <SocialLayout />
         </ProtectedRoute>
       ),
       children: [
