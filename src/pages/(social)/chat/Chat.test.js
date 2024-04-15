@@ -2,7 +2,7 @@ import { messageData } from '@mocks/data/chat.mock';
 import { existingUser } from '@mocks/data/user.mock';
 import { chatListMock, chatMessagesMock, emptyChatListMock } from '@mocks/handlers/chat';
 import { server } from '@mocks/server';
-import Chat from '@pages/social/chat/Chat';
+import { Chat } from '@pages/social/chat/chat';
 import { addToChatList, setSelectedChatUser } from '@redux/reducers/chat/chat.reducer';
 import { store } from '@redux/store';
 import { render, screen, waitFor } from '@root/test.utils';

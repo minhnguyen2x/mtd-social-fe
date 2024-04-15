@@ -10,14 +10,14 @@ import NotificationSkeleton from '@pages/(social)/notifications/NotificationSkel
 import CardSkeleton from '@components/card-element/CardSkeleton';
 import PhotoSkeleton from '@pages/(social)/photos/PhotoSkeleton';
 import ProfileSkeleton from '@pages/(social)/profile/ProfileSkeleton';
-import ChatSkeleton from '@pages/(social)/chat/ChatSkeleton';
+import { ChatSkeleton } from '@pages/(social)/chat/chat-skeleton';
 import VideoSkeleton from '@pages/(social)/videos/VideoSkeleton';
 import { AppRoute } from '@shared/constants/app-routes';
 
 const SocialLayout = lazy(() =>
   import('@shared/layouts/social/social').then((module) => ({ default: module.SocialLayout }))
 );
-const Chat = lazy(() => import('@pages/(social)/chat/Chat'));
+const Chat = lazy(() => import('@pages/(social)/chat/chat').then((module) => ({ default: module.Chat })));
 const Followers = lazy(() => import('@pages/(social)/followers/Followers'));
 const Following = lazy(() => import('@pages/(social)/following/Following'));
 const Notification = lazy(() => import('@pages/(social)/notifications/Notification'));
