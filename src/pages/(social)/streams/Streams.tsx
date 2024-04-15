@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
-import '@pages/social/streams/Streams.scss';
+import '@pages/(social)/streams/Streams.scss';
 import Suggestions from '@components/suggestions/Suggestions';
 import { getUserSuggestions } from '@shared/libs/redux-toolkit/api/suggestion';
 import useEffectOnce from '@shared/hooks/useEffectOnce';

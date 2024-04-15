@@ -1,4 +1,4 @@
-import '@pages/social/videos/Videos.scss';
+import '@pages/(social)/videos/Videos.scss';
 import useEffectOnce from '@shared/hooks/useEffectOnce';
 import { followerService } from '@shared/services/api/followers/follower.service';
 import { postService } from '@shared/services/api/post/post.service';

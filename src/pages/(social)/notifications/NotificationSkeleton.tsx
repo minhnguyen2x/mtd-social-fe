@@ -1,5 +1,5 @@
 import Skeleton from 'react-loading-skeleton';
-import '@pages/social/notifications/Notification.scss';
+import '@pages/(social)/notifications/Notification.scss';
 
 const NotificationSkeleton = () => {
   return (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Avatar from '@components/avatar/Avatar';
-import '@pages/social/notifications/Notification.scss';
+import '@pages/(social)/notifications/Notification.scss';
 import { FaCircle, FaRegCircle, FaRegTrashAlt } from 'react-icons/fa';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useAppSelector } from '@shared/hooks/use-app-selector';

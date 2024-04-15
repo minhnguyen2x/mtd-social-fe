@@ -7,7 +7,7 @@ import { Utils } from '@shared/services/utils/utils.service';
 import { useState } from 'react';
 import { useAppSelector } from '@shared/hooks/use-app-selector';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
-import '@pages/social/photos/Photos.scss';
+import '@pages/(social)/photos/Photos.scss';
 import ImageModal from '@components/image-modal/ImageModal';
 
 const Photos = () => {

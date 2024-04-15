@@ -1,4 +1,4 @@
-import '@pages/social/streams/Streams.scss';
+import '@pages/(social)/streams/Streams.scss';
 import SuggestionsSkeletons from '@components/suggestions/SuggestionsSkeleton';
 import PostFormSkeleton from '@components/posts/post-form/PostFormSkeleton';
 import PostSkeleton from '@components/posts/post/PostSkeleton';
