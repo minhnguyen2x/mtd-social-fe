@@ -2,14 +2,7 @@ import { createApi, BaseQueryFn } from '@reduxjs/toolkit/query/react';
 import { mtdSocialAPI } from '@shared/libs/axios/mtd-social-api';
 import { AxiosError, AxiosRequestConfig } from 'axios';
 import { BASE_URL } from '@shared/libs/axios/mtd-social-api';
-
-enum METHODS {
-  GET = 'GET',
-  POST = 'POST',
-  PUT = 'PUT',
-  DELETE = 'DELETE',
-  PATCH = 'PATCH'
-}
+import { METHODS } from '@shared/types/common';
 
 type MTDSocialAPIBaseQuery = BaseQueryFn<
   {
