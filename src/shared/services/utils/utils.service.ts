@@ -8,7 +8,7 @@ import { floor, random, some, findIndex } from 'lodash';
 import millify from 'millify';
 import { StoreDispatch } from 'shared/types/store';
 
-const APP_ENVIRONMENT = import.meta.env.VITE_APP_ENVIRONMENT as 'local' | 'development' | 'staging' | 'production';
+const APP_ENVIRONMENT = process.env.NEXT_PUBLIC_ENVIRONMENT as 'local' | 'development' | 'staging' | 'production';
 if (!APP_ENVIRONMENT) throw new Error('APP_ENVIRONMENT is not set');
 
 type DispatchClearNotificationParams = {

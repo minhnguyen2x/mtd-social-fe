@@ -2,8 +2,10 @@ import axios from 'axios';
 
 export let BASE_ENDPOINT = '';
 
-const APP_ENVIRONMENT = import.meta.env.VITE_APP_ENVIRONMENT as 'local' | 'development' | 'staging' | 'production';
+const APP_ENVIRONMENT = process.env.NEXT_PUBLIC_ENVIRONMENT as 'local' | 'development' | 'staging' | 'production';
 if (!APP_ENVIRONMENT) throw new Error('APP_ENVIRONMENT is not set');
+
+console.log('APP_ENVIRONMENT', APP_ENVIRONMENT);
 
 switch (APP_ENVIRONMENT) {
   case 'local':

@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const GIPHY_URL = 'https://api.giphy.com/v1/gifs';
-const API_KEY = import.meta.env.VITE_APP_GIPHY_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_GIPHY_API_KEY;
+if (!API_KEY) throw new Error('API_KEY is not set');
 
 class GiphyService {
   async search(query) {
