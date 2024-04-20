@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { ReduxStoreProvider } from '@shared/components/redux-store-provider';
+import '@shared/styles/index.scss';
 
 export const metadata: Metadata = {
   title: 'MTD-Social',
@@ -15,7 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <div id="root">{children}</div>
+        <ReduxStoreProvider>
+          <div id="root">{children}</div>
+        </ReduxStoreProvider>
       </body>
     </html>
   );

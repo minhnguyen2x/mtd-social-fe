@@ -1,5 +1,7 @@
-import { store } from '@shared/libs/redux-toolkit/store';
+import { makeStore } from '@shared/libs/redux-toolkit/store';
 
-export type StoreState = ReturnType<typeof store.getState>;
+export type AppStore = ReturnType<typeof makeStore>;
 
-export type StoreDispatch = typeof store.dispatch;
+export type StoreState = ReturnType<AppStore['getState']>;
+
+export type StoreDispatch = AppStore['dispatch'];

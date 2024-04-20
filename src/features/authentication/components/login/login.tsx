@@ -2,13 +2,14 @@ import { useState, useEffect, FunctionComponent } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
-import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '@shared/hooks/use-app-dispatch';
 import '@features/authentication/components/login/login.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { Utils } from '@shared/services/utils/utils.service';
 import { useSessionStorage } from '@shared/hooks/useSessionStorage';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export const Login: FunctionComponent = () => {
   const [username, setUsername] = useState('');
@@ -22,7 +23,7 @@ export const Login: FunctionComponent = () => {
   const [setStoredUsername] = useLocalStorage('username', 'set');
   const [setLoggedIn] = useLocalStorage('keepLoggedIn', 'set');
   const [pageReload] = useSessionStorage('pageReload', 'set');
-  const navigate = useNavigate();
+  const router = useRouter();
   const dispatch = useAppDispatch();
 
   const loginUser = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -48,8 +49,8 @@ export const Login: FunctionComponent = () => {
 
   useEffect(() => {
     if (loading && !user) return;
-    if (user) navigate('/app/social/streams');
-  }, [loading, user, navigate]);
+    if (user) router.push('/app/social/streams');
+  }, [loading, user, router]);
 
   return (
     <div className="auth-inner">
@@ -97,7 +98,7 @@ export const Login: FunctionComponent = () => {
           disabled={!username || !password}
         />
 
-        <Link to={'/forgot-password'}>
+        <Link href={'/forgot-password'}>
           <span className="forgot-password">
             Forgot password? <FaArrowRight className="arrow-right" />
           </span>

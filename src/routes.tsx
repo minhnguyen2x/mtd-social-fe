@@ -1,6 +1,5 @@
 import { ResetPassword } from '@pages/(auth)/reset-password/reset-password';
 import { ForgotPassword } from '@pages/(auth)/forgot-password/forgot-password';
-import { AuthTabs } from '@pages/(auth)/auth-tabs/auth-tabs';
 import Error from '@pages/error/Error';
 import { ProtectedRoute } from '@shared/components/routes/protected-route';
 import { useRoutes } from 'react-router-dom';
@@ -29,10 +28,6 @@ const Streams = lazy(() => import('@pages/(social)/streams/Streams'));
 
 export const AppRouter = () => {
   const elements = useRoutes([
-    {
-      path: AppRoute.AuthTabs,
-      element: <AuthTabs />
-    },
     {
       path: AppRoute.ForgotPassword,
       element: <ForgotPassword />

@@ -1,24 +1,25 @@
+'use client';
 import { useEffect, useState } from 'react';
-import '@pages/(auth)/auth-tabs/auth-tabs.scss';
+import '@app/(auth)/auth-tabs/auth-tabs.scss';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { Login } from '@features/authentication/components/login/login';
 import { Register } from '@features/authentication/components/register/register';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
-import { useNavigate } from 'react-router-dom';
 import { Utils } from '@shared/services/utils/utils.service';
 import PageLoader from '@components/page-loader/PageLoader';
+import { useRouter } from 'next/navigation';
 
-export const AuthTabs = () => {
+const AuthTabs = () => {
   const [type, setType] = useState('Sign In');
   const keepLoggedIn = useLocalStorage('keepLoggedIn', 'get');
   const [environment, setEnvironment] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const env = Utils.appEnvironment();
     setEnvironment(env);
-    if (keepLoggedIn) navigate('/app/social/streams');
-  }, [keepLoggedIn, navigate]);
+    if (keepLoggedIn) router.push('/app/social/streams');
+  }, [keepLoggedIn, router]);
 
   return (
     <>
@@ -56,3 +57,5 @@ export const AuthTabs = () => {
     </>
   );
 };
+
+export default AuthTabs;

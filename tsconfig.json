@@ -24,8 +24,9 @@
     //path
     "baseUrl": "./src",
     "paths": {
-      "@features/*": ["./features/*"],
       "@shared/*": ["./shared/*"],
+      "@features/*": ["./features/*"],
+      "@app/*": ["./app/*"],
       "@pages/*": ["./pages/*"],
 
       "@components/*": ["./components/*"],
