@@ -1,27 +1,31 @@
-import '@pages/(auth)/reset-password/reset-password.scss';
+'use client';
+
+import '@app/(auth)/reset-password/reset-password.scss';
 import { useState, FunctionComponent } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
-import { Link, useSearchParams } from 'react-router-dom';
 import backgroundImage from '@shared/assets/images/background.jpg';
 import { authService } from '@shared/services/api/auth/auth.service';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { AppRoute } from '@shared/constants/app-routes';
 
-export const ResetPassword: FunctionComponent = () => {
+const ResetPassword: FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearchParams();
 
   const resetPassword = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     try {
       const body = { password, confirmPassword };
-      const response = await authService.resetPassword(searchParams.get('token'), body);
+      const response = await authService.resetPassword(searchParams?.get('token'), body);
       setLoading(false);
       setPassword('');
       setConfirmPassword('');
@@ -83,7 +87,7 @@ export const ResetPassword: FunctionComponent = () => {
                     disabled={!password || !confirmPassword}
                   />
 
-                  <Link to={'/'}>
+                  <Link href={AppRoute.AuthTabs}>
                     <span className="login">
                       <FaArrowLeft className="arrow-left" /> Back to Login
                     </span>
@@ -97,3 +101,5 @@ export const ResetPassword: FunctionComponent = () => {
     </div>
   );
 };
+
+export default ResetPassword;
