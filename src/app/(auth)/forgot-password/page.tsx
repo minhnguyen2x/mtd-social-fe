@@ -1,13 +1,16 @@
+'use client';
+
 import { FaArrowLeft } from 'react-icons/fa';
 import { useState, FunctionComponent } from 'react';
 import { Input } from '@shared/components/input/input';
 import { Button } from '@shared/components/button/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import backgroundImage from '@shared/assets/images/background.jpg';
-import '@pages/(auth)/forgot-password/forgot-password.scss';
+import '@app/(auth)/forgot-password/forgot-password.scss';
 import { authService } from '@shared/services/api/auth/auth.service';
+import { AppRoute } from '@shared/constants/app-routes';
 
-export const ForgotPassword: FunctionComponent = () => {
+const ForgotPassword: FunctionComponent = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -70,7 +73,7 @@ export const ForgotPassword: FunctionComponent = () => {
                     disabled={!email}
                   />
 
-                  <Link to={'/'}>
+                  <Link href={AppRoute.AuthTabs}>
                     <span className="login">
                       <FaArrowLeft className="arrow-left" /> Back to Login
                     </span>
@@ -84,3 +87,5 @@ export const ForgotPassword: FunctionComponent = () => {
     </div>
   );
 };
+
+export default ForgotPassword;
