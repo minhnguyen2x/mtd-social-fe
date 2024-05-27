@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ReduxStoreProvider } from '@shared/components/redux-store-provider';
 import '@shared/styles/index.scss';
+import '@shared/styles/app.scss';
 
 export const metadata: Metadata = {
   title: 'MTD-Social',
