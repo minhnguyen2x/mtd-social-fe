@@ -1,4 +1,3 @@
-import Error from '@pages/error/Error';
 import { ProtectedRoute } from '@shared/components/routes/protected-route';
 import { useRoutes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
@@ -107,10 +106,6 @@ export const AppRouter = () => {
           )
         }
       ]
-    },
-    {
-      path: AppRoute.Others,
-      element: <Error />
     }
   ]);
 
